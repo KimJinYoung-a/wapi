@@ -1,0 +1,73 @@
+﻿.markWinSelection
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+
+	border: #316ac5 1px solid;
+    background-color: #F9F8F7;
+}
+.markWinCaptionSelected
+{
+	cursor:default;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+	font-weight: bold;
+	font-family: 굴림;
+	font-size: 9pt;
+	color: #0064FF;
+}
+.markWinCaptionOver
+{
+	cursor:default;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+	font-family: 굴림;
+	font-size: 9pt;
+	color: #0078FF;
+}
+.markWinCaption
+{
+	cursor:default;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+	font-family: 굴림;
+	font-size: 9pt;
+	color: #00000F;
+}
+
+.markWinCheckBox
+{
+	margin: 0px;
+
+	font-family: 굴림;
+	font-size: 9pt;
+	color: #00000F;
+}
+
+.markCell
+{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+	cursor:default;
+	width: 18px;
+	height: 15px;
+	background-color: #F9F8F7;
+	color:#000000;
+	font-family:굴림;
+	font-size:9pt;
+}
+
+.markCellContainer
+{
+	background-color: #B2CBFF;
+}
+

@@ -1,0 +1,333 @@
+﻿<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>InnoDitor Media Upload</title>
+
+<script language="javascript" src="./js/browserlanguage.js"></script>
+<script language="javascript">
+// language force setting - english
+g_browserCHK.language = "en";
+</script>
+<script language="javascript" src="./js/uploadmedia_u.js"></script>
+<script language="javascript">
+// customer setting variable
+// if this example apply...
+var g_strUploadPath_Media = "/z_experience/upload_tran_u.asp";
+</script>
+
+<script language="javascript">
+function fnMediaSend()
+{
+	var strMediaURL = "";
+
+	if(1 == g_nSelectedTabIndex)
+	{
+		if("" == g_objUploadObjectProp.upload_url)
+		{
+			alert(res_warning_msg[4]);
+			return;
+		}
+
+		strMediaURL = g_objUploadObjectProp.upload_url;
+	}
+	else
+	{
+		if("" == g_objLoadURLObjectProp.media_url)
+		{
+			alert(res_warning_msg[5]);
+			return;
+		}
+
+		strMediaURL = g_objLoadURLObjectProp.media_url;
+	}
+
+
+	if("" != document.body.all["txtWidth"].value)
+	{
+		if(isNaN(document.body.all["txtWidth"].value))
+		{
+			alert(res_warning_msg[6]);
+			document.body.all["txtWidth"].focus();
+			return;
+		}
+	}
+
+	if("" != document.body.all["txtHeight"].value)
+	{
+		if(isNaN(document.body.all["txtHeight"].value))
+		{
+			alert(res_warning_msg[6]);
+			document.body.all["txtHeight"].focus();
+			return;
+		}
+	}
+
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = strMediaURL;
+	arrReturnValue[1] = document.body.all["txtWidth"].value;
+	arrReturnValue[2] = document.body.all["txtHeight"].value;
+	arrReturnValue[3] = (document.body.all["chkShowControls"].checked ? "true" : "false");
+	arrReturnValue[4] = (document.body.all["chkShowStatusBar"].checked ? "true" : "false");
+	window.returnValue = arrReturnValue;
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7" onload="javascript:fnAdjustPage();">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr valign="bottom">
+					<td height="30"><img id="res_image_0" src="./image/blank.gif"></td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="2"></td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0" width="565">
+				<tr>
+					<td align="left">
+						<table border="0" cellpadding="0" cellspacing="0" height="40">
+						<tr>
+							<td valign="bottom"><img id="imgTab_1" src="./image/blank.gif" style="cursor:pointer" onmouseover="javascript:fnTabMouseOver(this,1);" onmouseout="javascript:fnTabMouseOut(this,1);" onclick="javascript:fnTabClick(1);"></td>
+							<td width="3"></td>
+							<td valign="bottom"><img id="imgTab_2" src="./image/blank.gif" style="cursor:pointer" onmouseover="javascript:fnTabMouseOver(this,2);" onmouseout="javascript:fnTabMouseOut(this,2);" onclick="javascript:fnTabClick(2);"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#ffffff"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table height="24" border="0" cellpadding="0" cellspacing="0">
+						<tr valign="top">
+							<td width="400">
+								<input type="text" name="txtMediaPath" class="form" style="width:400px" maxlength="512" value="">
+							</td>
+							<td width="12"></td>
+							<td>
+								<table id="mediaUploadArea" border="0" cellpadding="0" cellspacing="0">
+								<tr valign="top">
+									<td width="70">
+										<form name="frmUpload" method="post" enctype="multipart/form-data" onsubmit="return false">
+										<span class="UploadFileContainer"><input type="file" name="fileUpload" class="UploadFile" onchange="javascript:fnChangeFile(this.value);"></span>
+										<input type="hidden" name="hdnUploadType" value="3">
+										</form>
+									</td>
+									<td width="70" align="right"><img id="res_image_1" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnUploadFile();"></td>
+									<td width="5"></td>
+								</tr>
+								</table>
+
+								<table id="mediaLoadURLArea" style="display:none" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<img id="res_image_2" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnLoadURLMedia();">
+									</td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td width="400">
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="media_main" align="center" width="400" height="400" style="border:#c4cad1; border-style: solid; border-width: 1px 1px 1px 1px;" bgcolor="#ffffff" background="./image/editwin/pop_upload_thumnail_bg.gif"><img id="res_image_3" src="./image/blank.gif" border="0"></td>
+								</tr>
+								</table>
+
+							</td>
+							<td width="12"></td>
+							<td>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr valign="top">
+									<td height="176" align="center">
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_0" align="center" class="textDisplay"></td>
+										</tr>
+										<tr>
+											<td height="2"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="26"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td height="20">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td height="1" bgcolor="dedede"></td>
+										</tr>
+										<tr>
+											<td height="1" bgcolor="ffffff"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="res_item_1" class="textDisplay" height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_2" class="textDisplay" width="85"></td>
+											<td><input name="txtWidth" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="300"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20">(px)</td>
+										</tr>
+										</table>
+
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_3" class="textDisplay" width="85"></td>
+											<td><input name="txtHeight" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="300"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20">(px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="res_item_4" class="textDisplay" height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="20"><input type="checkbox" name="chkShowControls" checked></td>
+											<td id="res_item_5" class="textDisplay" width="120"></td>
+										</tr>
+										</table>
+
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="20"><input type="checkbox" name="chkShowStatusBar" checked></td>
+											<td id="res_item_6" class="textDisplay" width="120"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" height="28" align="right">
+								<tr>
+									<td valign="bottom"><img id="res_image_4" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnMediaSend();"></td>
+									<td width="5"></td>
+									<td valign="bottom"><img id="res_image_5" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:window.close();"></td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" height="1"></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+<!-- Upload Form Action Area : Start -->
+<iframe name="ifrmUpload" src="" style="display:none" width="0" height="0" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0"></iframe>
+<!-- Upload Form Action Area : End -->
+
+<div id="uploadStatus" style="display:none">
+	<div class="UploadStatus" style="top:0;left:0;width:600;height:230"></div>
+	<div class="UploadStatus" style="top:230;left:0;width:160;height:80"></div>
+	<div class="UploadStatusBar" style="top:230;left:160;width:280;height:80"><img id="res_image_6" src="./image/blank.gif"></div>
+	<div class="UploadStatus" style="top:230;left:440;width:160;height:80"></div>
+	<div class="UploadStatus" style="top:310;left:0;width:600;height:220"></div>
+</div>
+
+</body> 
+</html>

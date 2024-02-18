@@ -1,0 +1,5 @@
+<%
+
+dbAppNotiget.Close
+
+%>

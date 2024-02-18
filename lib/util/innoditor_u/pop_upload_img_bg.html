@@ -1,0 +1,305 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>이노디터(InnoDitor) 이미지 업로드</title>
+<link rel="stylesheet" href="./css/ko/uploadstyle.css">
+
+<script language="javascript" src="./js/browser.js"></script>
+<script language="javascript" src="./js/uploadimage_bg.js"></script>
+
+<script language="javascript">
+// customer 셋팅 변수
+var g_strUploadPath_Image = "/z_experience/upload_tran_u.asp";
+</script>
+
+<script language="javascript">
+function fnLoadPage()
+{
+	fnAdjustPage();
+
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.wk || g_browserCHK.op)
+	{
+		var objParam = opener.fnGetBackgroundImageValue();
+
+		fnInitLoadImage(objParam[0]);
+		fnInitLoadRepeat(objParam[1]);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		if((null != window.dialogArguments) && ("undefined" != window.dialogArguments))
+		{
+			var objParam = window.dialogArguments;
+
+			fnInitLoadImage(objParam[0]);
+			fnInitLoadRepeat(objParam[1]);
+		}
+	}
+}
+
+function fnImageSend()
+{
+	if(null == g_objUploadObject)
+	{
+		alert("이미지 업로드를 먼저 하세요");
+		return;
+	}
+
+	var bRemoveChecked = document.getElementById("chkBackgroundRemove").checked;
+
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = g_objUploadObject.src;
+	arrReturnValue[1] = document.getElementById("selBackgroundRepeat").value;
+	arrReturnValue[2] = bRemoveChecked;
+
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.wk || g_browserCHK.op)
+	{
+		opener.fnSetBackgroundImageValue(arrReturnValue);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		window.returnValue = arrReturnValue;
+	}
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7" onload="javascript:fnLoadPage();">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr valign="bottom">
+					<td height="30"><img src="./image/editwin/ko/pop_upload_image_title.gif"></td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="2"></td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0" width="565">
+				<tr>
+					<td align="left">
+						<table border="0" cellpadding="0" cellspacing="0" height="40">
+						<tr>
+							<td valign="bottom"><img src="./image/editwin/ko/pop_upload_tab_image_1_r.gif"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<td width="400">
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="img_main" align="center" width="400" height="410" style="border:#c4cad1; border-style: solid; border-width: 1px 1px 1px 1px;" bgcolor="#ffffff" background="./image/editwin/pop_upload_thumnail_bg.gif"><img src="./image/editwin/ko/pop_upload_image_main_title_1.gif" border="0"></td>
+								</tr>
+								</table>
+
+							</td>
+							<td width="12"></td>
+							<td>
+
+								<table id="imgPreviewArea" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="150" height="150">
+										<tr>
+											<td id="img_preview" align="center" bgcolor="#FFFFFF" background="./image/editwin/pop_upload_thumnail_bg.gif">
+												<img src="./image/editwin/ko/pop_upload_image_preview_title.gif" border="0">
+											</td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="10"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0" height="24">
+										<tr valign="top">
+											<td width="5"></td>
+											<td width="70">
+												<form name="frmUpload" method="post" enctype="multipart/form-data" onsubmit="return false">
+												<span class="UploadFileContainer"><input type="file" id="fileUpload" name="fileUpload" class="UploadFile" style="cursor:pointer;"></span>
+												<input type="hidden" name="hdnUploadType" value="1">
+												</form>
+											</td>
+											<td width="70" align="right"><img src="./image/editwin/ko/btn_upload.gif" style="cursor:pointer" onclick="javascript:fnUploadFile();"></td>
+											<td width="5"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="6"></td>
+										</tr>
+										</table>
+
+										<table align="center" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay">JPG, GIF, PNG 파일</td>
+										</tr>
+										<tr>
+											<td class="textDisplay">(1024K 이하만 가능)</td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="2"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td height="8">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td height="1" bgcolor="dedede"></td>
+										</tr>
+										<tr>
+											<td height="1" bgcolor="ffffff"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="textDisplay" height="20"><b>배경 이미지 반복(선택)</b></td>
+								</tr>
+								<tr>
+									<td>
+										<select id="selBackgroundRepeat" name="selBackgroundRepeat" style="width:150px;">
+											<option value="repeat">반복(기본값)</option>
+											<option value="no-repeat">반복 안함</option>
+											<option value="repeat-x">가로 반복</option>
+											<option value="repeat-y">세로 반복</option>
+										</select>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="66"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr valign="top">
+									<td class="textDisplay" rowspan="2" height="20"><input type="checkbox" id="chkBackgroundRemove" name="chkBackgroundRemove" value="1"></td>
+									<td class="textDisplay">설정된 배경 이미지를</td>
+								</tr>
+								<tr>
+									<td class="textDisplay">제거합니다.</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="4"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" height="28" align="right">
+								<tr>
+									<td valign="bottom"><img src="./image/editwin/ko/btn_apply.gif" style="cursor:pointer" onclick="javascript:fnImageSend();"></td>
+									<td width="5"></td>
+									<td valign="bottom"><img src="./image/editwin/ko/btn_cancel.gif" style="cursor:pointer" onclick="javascript:window.close();"></td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" height="1"></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+<!-- Upload Form Action Area : Start -->
+<iframe name="ifrmUpload" src="" style="display:none" width="0" height="0" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0"></iframe>
+<!-- Upload Form Action Area : End -->
+
+<div id="uploadStatus" style="display:none">
+	<div class="UploadStatus" style="top:0;left:0;width:600;height:230"></div>
+	<div class="UploadStatus" style="top:230;left:0;width:160;height:80"></div>
+	<div class="UploadStatusBar" style="top:230;left:160;width:280;height:80"><img src="./image/editwin/ko/pop_upload_status.gif"></div>
+	<div class="UploadStatus" style="top:230;left:440;width:160;height:80"></div>
+	<div class="UploadStatus" style="top:310;left:0;width:600;height:220"></div>
+</div>
+
+</body>
+</html>

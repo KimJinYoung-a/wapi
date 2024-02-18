@@ -1,0 +1,282 @@
+BODY { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò";
+    scrollbar-face-color: #F8F8F8;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #BFBFBF;
+	scrollbar-track-color: #f7f7f7;
+	scrollbar-arrow-color: #BFBFBF;}
+
+TD { FONT-SIZE : 8pt; COLOR : #505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+SELECT { BORDER-BOTTOM: 1px solid rgb(0,0,0); BORDER-LEFT: 1px solid rgb(0,0,0); BORDER-RIGHT: 1px solid rgb(0,0,0); BORDER-TOP: 1px solid
+rgb(0,0,0); FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+DIV { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+FORM { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+
+TEXTAREA { FONT-SIZE : 8pt; COLOR : #505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+CENTER { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+OPTION { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+PRE { FONT-SIZE : 8pt; COLOR : #505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+BLOCKQUOTE { FONT-SIZE : 8pt; COLOR : 505050; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò"; }
+
+
+A:link { COLOR : #505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt;}
+A:visited { COLOR : #505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt;}
+A:active { COLOR : #505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt;}
+A:hover { COLOR : #000000; TEXT-DECORATION : none; LINE-HEIGHT : 15pt;}
+
+A.notice:link { FONT-SIZE : 8pt; COLOR : #505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt; }
+A.notice:visited { FONT-SIZE : 8pt; COLOR : #505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt; }
+A.notice:active { FONT-SIZE : 8pt; COLOR : #505050; TEXT-DECORATION : none; line-height : 15pt; }
+A.notice:hover { FONT-SIZE : 8pt; COLOR : #000000; TEXT-DECORATION : none; LINE-HEIGHT : 15pt; }
+
+A.faq:link { FONT-SIZE : 8pt; COLOR : #505050; TEXT-DECORATION : none; line-height : 15pt; }
+A.faq:visited { FONT-SIZE : 8pt; COLOR :#505050; TEXT-DECORATION : none; LINE-HEIGHT : 15pt; }
+A.faq:active { FONT-SIZE : 8pt; COLOR : #505050; TEXT-DECORATION : none; line-height : 15pt; }
+A.faq:hover { FONT-SIZE : 8pt; COLOR : #000000; TEXT-DECORATION : none; line-height : 15pt; }
+
+
+.box
+{
+	BORDER-BOTTOM: gray 1px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-RIGHT: gray 1px solid;
+    BORDER-TOP: gray 1px solid;
+	BORDER-Color:#C0C0C0;
+    background-color:#FFFFFF;
+	COLOR: #505050;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-RIGHT: 1px;
+	PADDING-TOP: 1px;
+    FONT-FAMILY: µ¸¿ò;
+}
+
+
+
+
+
+.box_no
+{
+	BORDER-BOTTOM: gray 1px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-RIGHT: gray 1px solid;
+    BORDER-TOP: gray 1px solid;
+	BORDER-Color:#ffffff;
+    background-color:#FFFFFF;
+	COLOR: #505050;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-RIGHT: 1px;
+	PADDING-TOP: 1px;
+    FONT-FAMILY: µ¸¿ò;
+}
+
+.box_no_byte
+{
+	BORDER-BOTTOM: gray 1px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-RIGHT: gray 1px solid;
+    BORDER-TOP: gray 1px solid;
+	BORDER-Color:#ffffff;
+    background-color:#FFFFFF;
+	COLOR: 605E4A;
+	FONT-SIZE: 10pt;
+	PADDING-BOTTOM: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-RIGHT: 2px;
+	PADDING-TOP: 2px;
+    FONT-FAMILY: µ¸¿ò;
+}
+
+
+textarea
+{
+	BORDER-BOTTOM: gray 1px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-RIGHT: gray 1px solid;
+    BORDER-TOP: gray 1px solid;
+	BORDER-Color:#E4E4E4;
+	COLOR: #505050;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-RIGHT: 2px;
+	PADDING-TOP: 2px;
+    FONT-FAMILY: µ¸À½;
+}
+.smsbox
+{
+    word-break:break-all;
+	BORDER-BOTTOM: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-RIGHT: gray 0px solid;
+    BORDER-TOP: gray 0px solid;
+	BORDER-Color:transparent;
+	COLOR: #505050;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+    FONT-FAMILY: ±¼¸²Ã¼;
+    overflow:hidden;
+}
+
+.PD1px { padding: 1px; }
+
+.BtnImg
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:#F5F5F5;
+}
+.BtnImg_reject
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 80px;
+	height: 25px;
+	background-color:#F5F5F5;
+}
+.BtnImgHtml
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:F8F6E7;
+}
+.BtnImgHtml_reject
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 80px;
+	height: 25px;
+	background-color:F8F6E7;
+}
+
+.BtnImgEvent01
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:FD8A13;
+}
+.BtnImgEvent02
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:white;
+}
+.BtnImgEvent03
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:#4AD2E6;
+}
+
+.BtnImgCard01
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:#B40000;
+}
+
+.BtnImgCard02
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:#FDFFF3;
+}
+
+.BtnImgCard05
+{
+	border-style:none;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	width: 25px;
+	height: 25px;
+	background-color:#E1E1E1;
+	FILTER: alpha(opacity=70);
+}
+
+
+.sms_box { BORDER-BOTTOM: 0px solid rgb(0,0,0); BORDER-LEFT: 0px solid rgb(0,0,0); BORDER-RIGHT: 0px solid rgb(0,0,0); BORDER-TOP: 0px solid
+rgb(0,0,0); background-color:#D7D3D4; FONT-SIZE : 8pt; LINE-HEIGHT : 15pt; FONT-FAMILY : "Verdana", "µ¸¿ò";}
+
+
+.fieldid
+{
+	font-size:9pt;
+	color: #666666;
+	background-color:#ffffff;
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	FONT-FAMILY: "Verdana", "µ¸¿ò";
+}
+
+.n_ip { FONT-SIZE : 9pt;  FONT-FAMILY : "Verdana", "µ¸¿ò";}
+.ver { FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #2CA386; FONT-FAMILY: µ¸¿ò, verdana, helvetica, arial}
+
+
+.footer {
+	font-family: "Microsoft Sans Serif";
+	font-size: 7pt;
+	color: #7F7F7C;
+}
+.footer1 {
+	font-family: "Microsoft Sans Serif";
+	font-size: 8pt;
+	color: #7F7F7C;
+}
+.footer2 {
+	font-family: "MS UI Gothic";
+	font-size: 11px;
+	font-weight: bold;
+	color: 9A9A9A;
+}
+.bonmun {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	color: #333333;
+}

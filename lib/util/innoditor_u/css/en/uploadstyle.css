@@ -1,0 +1,48 @@
+﻿.textDisplay
+{
+	color: #555555;
+	font-family: Arial;
+	font-size: 9pt; 
+}
+.form
+{
+	font-size: 9pt;
+	color: #666666;
+	font-family: Arial;
+	background-color: #ffffff;
+	border: 1px solid #D0D0D0;
+}
+
+.UploadFileContainer
+{
+	position:absolute;
+	width:63px;
+	height:20px;
+	clip:rect(0 63 20 0);
+	background-image:url("../../image/editwin/en/btn_file_select.gif");
+	z-index:10002;
+}
+.UploadFile
+{
+	position:relative;
+	top:0;
+	left:-20px;
+	width:60px;
+	height:20px;
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+.UploadStatus
+{
+	z-index:10046;
+	position:absolute;
+	background-color: #ffffff;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+.UploadStatusBar
+{
+	z-index:10046;
+	position:absolute;
+	background-color: #ffffff;
+}

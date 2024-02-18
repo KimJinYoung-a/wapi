@@ -1,0 +1,97 @@
+﻿.editorContainer {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+}
+.editor_frame_left {
+	width: 160px;
+	height: 100%;
+
+	border-left: #c4cad1 1px solid;
+	border-top: #c4cad1 0px solid;
+	border-right: #c4cad1 0px solid;
+	border-bottom: #c4cad1 1px solid;
+}
+.editor_frame {
+	height: 100%;
+
+	border-left: 1px solid #c4cad1;
+	border-top: 0px solid #c4cad1;
+	border-right: 1px solid #c4cad1;
+	border-bottom: 1px solid #c4cad1;
+}
+.editor_frame_nothing {
+	width: 100%;
+	height: 100%;
+
+	border: #c4cad1 1px solid;
+}
+.editor_source_frame_padding {
+	width: 10px;
+	height: 100%;
+
+	border-left: #c4cad1 1px solid;
+	border-top: #c4cad1 0px solid;
+	border-right: #c4cad1 0px solid;
+	border-bottom: #c4cad1 1px solid;
+
+	background-color: #F7F8FD;
+}
+.editor_source_frame_main {
+	border-left: #c4cad1 0px solid;
+	border-top: #c4cad1 0px solid;
+	border-right: #c4cad1 1px solid;
+	border-bottom: #c4cad1 1px solid;
+}
+.editor_source_frame_padding_nothing {
+	width: 10px;
+	height: 100%;
+
+	border-left: #c4cad1 1px solid;
+	border-top: #c4cad1 1px solid;
+	border-right: #c4cad1 0px solid;
+	border-bottom: #c4cad1 1px solid;
+
+	background-color: #F7F8FD;
+}
+.editor_source_frame_main_nothing {
+	border-left: #c4cad1 0px solid;
+	border-top: #c4cad1 1px solid;
+	border-right: #c4cad1 1px solid;
+	border-bottom: #c4cad1 1px solid;
+}
+
+.editor_source_frame {
+	width: 100%;
+	height: 100%;
+
+	padding-left: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+
+	border: 0px;
+
+	word-break:break-all;
+	font-family:굴림;
+	font-size:9pt;
+	color:#000000;
+	background-color: #F7F8FD;
+}
+.editor_source_frame_nothing {
+	width: 100%;
+	height: 100%;
+
+	padding-left: 0px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+
+	border: 0px;
+
+	word-break:break-all;
+	font-family:굴림;
+	font-size:9pt;
+	color:#000000;
+	background-color: #F7F8FD;
+}

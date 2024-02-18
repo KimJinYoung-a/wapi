@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Flash Chart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<script language="javascript" src="FusionCharts.js"></script>
+</head>
+<body>
+<div id="chartdiv3" align="center"></div>
+<script type="text/javascript">	
+	var chart = new FusionCharts("Pie3D.swf", "chartdiv3", "640", "480", "0", "0");
+	chart.setDataURL("Pie3D.xml");
+	chart.render("chartdiv3");
+</script>
+</body>
+</html>

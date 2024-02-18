@@ -1,0 +1,175 @@
+﻿.tbToolbarSet
+{
+	width: 100%;
+	background-color: #F7F8FD;
+	border-left: 1px solid buttonshadow; 
+	border-top: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	border-bottom: 1px solid buttonshadow;
+}
+
+.tbToolbarSetTabMode
+{
+	width: 100%;
+	background-color: #F7F8FD;
+	border-left: #c4cad1 solid 1px;
+	border-top: 0px;
+	border-right: #c4cad1 solid 1px; 
+	border-bottom: #c4cad1 solid 1px; 
+}
+
+
+.tbButton_Image
+{
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	background-repeat: no-repeat;
+}
+.tbButton_Image img
+{
+	width: 16px;
+	height: 16px;
+	border: 0;
+}
+
+
+.tbDropDown_AreaButton
+{
+	white-space: nowrap;
+	width: 20px;
+	height: 20px;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbDropDown_AreaArrow
+{
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_buttonarrow.gif);
+	width: 8px;
+	height: 20px;
+	background-repeat: no-repeat;
+}
+
+
+.tbComboBox_Caption
+{
+	font-size: 9pt;
+	color: #555555;
+	font-family: ＭＳ ゴシック;
+
+	cursor: default;
+	overflow: visible;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-left: 5px;
+	opacity: 0.75;
+	filter: alpha(opacity=90);
+	height: 16px;
+}
+.tbComboBox_AreaLabel_1
+{
+	font-size: 9pt;
+	color: #555555;
+	font-family: ＭＳ ゴシック;
+
+	white-space: nowrap;
+	padding-top: 1px;
+	width: 100%;
+	cursor: default;
+	background-color: #ffffff;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbComboBox_AreaLabel_2
+{
+	font-size: 9pt;
+	color: #555555;
+	font-family: ＭＳ ゴシック;
+
+	white-space: nowrap;
+	padding-top: 2px;
+	padding-left: 2px;
+	width: 100%;
+	cursor: default;
+	background-color: #ffffff;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbComboBox_AreaArrow
+{
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_buttonarrow.gif);
+	border-left: #b7b7a6 1px solid;
+	height: 16px;
+	background-repeat: no-repeat;
+}
+.tbComboBox_Item_Select
+{
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_arrow_right.gif);
+	width: 14px;
+	background-repeat: no-repeat;
+}
+
+.tbTabSeparator
+{
+	background-color: #316AC5;
+	margin: 2px;
+	width: 1px;
+	height: 16px;
+}
+.tbTabButton_Image
+{
+	width: 13px;
+	height: 13px;
+}
+.tbTabButton_Image img
+{
+	width: 13px;
+	height: 13px;
+	border: 0;
+}
+.tbTabButton_Caption
+{
+	position: relative;
+	top: 1px;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 2px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: ＭＳ ゴシック;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.leftViewAreaClose
+{
+	background-position: center center;
+	background-image: url(../../image/toolbar/view_btn_close.gif);
+	width: 13px;
+	height: 12px;
+	margin-bottom: 2px;
+	background-repeat: no-repeat;
+}
+
+.adjustWaitStatus
+{
+	background-color: #ffffff;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+
+.codeInspectWaitStatus
+{
+	background-color: #ffffff;
+	filter:alpha(opacity=40);
+	opacity:0.4;
+}

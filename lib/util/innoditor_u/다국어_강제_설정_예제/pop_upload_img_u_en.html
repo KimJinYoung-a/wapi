@@ -1,0 +1,425 @@
+﻿<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>InnoDitor Image Upload</title>
+
+<script language="javascript" src="./js/browserlanguage.js"></script>
+<script language="javascript">
+// language force setting - english
+g_browserCHK.language = "en";
+</script>
+<script language="javascript" src="./js/uploadimage_u.js"></script>
+
+<script language="javascript">
+// customer setting variable
+// if this example apply...
+var g_strUploadPath_Image = "/z_experience/upload_tran_u.asp";
+</script>
+
+<script language="javascript">
+function fnImageSend()
+{
+	var strImageURL = "";
+
+	if(1 == g_nSelectedTabIndex)
+	{
+		if(null == g_objUploadObject)
+		{
+			alert(res_warning_msg[4]);
+			return;
+		}
+
+		strImageURL = g_objUploadObject.src;
+	}
+	else
+	{
+		if(null == g_objLoadURLObject)
+		{
+			alert(res_warning_msg[5]);
+			return;
+		}
+
+		strImageURL = g_objLoadURLObject.src;
+	}
+
+
+	if("" == document.getElementById("txtAlt").value)
+	{
+		alert(res_warning_msg[7]);
+		document.getElementById("txtAlt").focus();
+		return;
+	}
+
+
+	if("" != document.getElementById("txtWidth").value)
+	{
+		if(isNaN(document.getElementById("txtWidth").value))
+		{
+			alert(res_warning_msg[6]);
+			document.getElementById("txtWidth").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtHeight").value)
+	{
+		if(isNaN(document.getElementById("txtHeight").value))
+		{
+			alert(res_warning_msg[6]);
+			document.getElementById("txtHeight").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtBorder").value)
+	{
+		if(isNaN(document.getElementById("txtBorder").value))
+		{
+			alert(res_warning_msg[6]);
+			document.getElementById("txtBorder").focus();
+			return;
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	// basic apply (image align -> left) - start
+/*
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = strImageURL;
+	arrReturnValue[1] = document.getElementById("txtAlt").value;
+	arrReturnValue[2] = document.getElementById("txtWidth").value;
+	arrReturnValue[3] = document.getElementById("txtHeight").value;
+	arrReturnValue[4] = document.getElementById("txtBorder").value;
+*/
+	// basic apply (image align -> left) - end
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	// extension apply - start
+	var strALT = document.getElementById("txtAlt").value;
+	var strWidth = document.getElementById("txtWidth").value;
+	var strHeight = document.getElementById("txtHeight").value;
+	var strBorder = document.getElementById("txtBorder").value;
+
+	var strImageHTML = "";
+	strImageHTML += "<img src='" + strImageURL + "' alt='" + strALT + "' width='" + strWidth + "' height='" + strHeight + "' border='" + strBorder + "'>";
+
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = "";
+	arrReturnValue[1] = "";
+	arrReturnValue[2] = "";
+	arrReturnValue[3] = "";
+	arrReturnValue[4] = "";
+	arrReturnValue[5] = strImageHTML;// image tag direct setting -> [0] ~ [4] value set ""
+	// extension apply - end
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.wk || g_browserCHK.op)
+	{
+		opener.fnSetImageReturnValue(arrReturnValue);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		window.returnValue = arrReturnValue;
+	}
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7" onload="javascript:fnAdjustPage();">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr valign="bottom">
+					<td height="30"><img id="res_image_0" src="./image/blank.gif"></td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="2"></td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0" width="565">
+				<tr>
+					<td align="left">
+						<table border="0" cellpadding="0" cellspacing="0" height="40">
+						<tr>
+							<td valign="bottom"><img id="imgTab_1" src="./image/blank.gif" style="cursor:pointer" onmouseover="javascript:fnTabMouseOver(this,1);" onmouseout="javascript:fnTabMouseOut(this,1);" onclick="javascript:fnTabClick(1);"></td>
+							<td width="3"></td>
+							<td valign="bottom"><img id="imgTab_2" src="./image/blank.gif" style="cursor:pointer" onmouseover="javascript:fnTabMouseOver(this,2);" onmouseout="javascript:fnTabMouseOut(this,2);" onclick="javascript:fnTabClick(2);"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table id="imgLoadArea" height="24" border="0" cellpadding="0" cellspacing="0" style="display:none">
+						<tr valign="top">
+							<td width="400">
+								<input type="text" id="txtLoadURL" name="txtLoadURL" class="form" style="width:400px" maxlength="512">
+							</td>
+							<td width="4"></td>
+							<td width="70">
+								<img id="res_image_1" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnLoadURLImage();">
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="bottom">
+							<td width="400" valign="top">
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="img_main" align="center" width="400" height="410" style="border:#c4cad1; border-style: solid; border-width: 1px 1px 1px 1px;" bgcolor="#ffffff" background="./image/editwin/pop_upload_thumnail_bg.gif"><img id="res_image_2" src="./image/blank.gif" border="0"></td>
+								</tr>
+								</table>
+
+							</td>
+							<td width="12"></td>
+							<td>
+
+								<table id="imgPreviewArea" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="150" height="150">
+										<tr>
+											<td id="img_preview" align="center" bgcolor="#FFFFFF" background="./image/editwin/pop_upload_thumnail_bg.gif">
+												<img id="res_image_3" src="./image/blank.gif" border="0">
+											</td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="10"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0" height="24">
+										<tr valign="top">
+											<td width="5"></td>
+											<td width="70">
+												<form name="frmUpload" method="post" enctype="multipart/form-data" onsubmit="return false">
+												<span class="UploadFileContainer"><input type="file" id="fileUpload" name="fileUpload" class="UploadFile" style="cursor:pointer;"></span>
+												<input type="hidden" name="hdnUploadType" value="1">
+												</form>
+											</td>
+											<td width="70" align="right"><img id="res_image_4" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnUploadFile();"></td>
+											<td width="5"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="6"></td>
+										</tr>
+										</table>
+
+										<table align="center" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_0" class="textDisplay"></td>
+										</tr>
+										<tr>
+											<td id="res_item_1" class="textDisplay"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="2"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td height="8">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td height="1" bgcolor="dedede"></td>
+										</tr>
+										<tr>
+											<td height="1" bgcolor="ffffff"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="res_item_5" class="textDisplay" height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><input id="txtAlt" name="txtAlt" type="text" class="form" style="width:150px" maxlength="50"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="5"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="res_item_2" class="textDisplay" height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="2"></td>
+											<td><input id="chkSameRatio" name="chkSameRatio" type="checkbox" class="form" value="1" style="background-color:transparent;border:0 solid #FFFFFF;" checked></td>
+											<td id="res_item_8" class="textDisplay" width="100" height="20"></td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_3" class="textDisplay" width="85" height="20"></td>
+											<td><input id="txtWidth" name="txtWidth" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="0" onkeyup="javascript:fnKeyUpWidthHeight(1);"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20" height="20">(px)</td>
+										</tr>
+										</table>
+
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_4" class="textDisplay" width="85" height="20"></td>
+											<td><input id="txtHeight" name="txtHeight" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="0" onkeyup="javascript:fnKeyUpWidthHeight(2);"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20" height="20">(px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="5"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="res_item_6" class="textDisplay" height="20"></td>
+								</tr>
+								<tr>
+									<td>
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td id="res_item_7" class="textDisplay" width="95" height="20"></td>
+											<td><input id="txtBorder" name="txtBorder" type="text" class="form" style="width:20px;text-align:right" maxlength="2" value="0"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="30" height="20"> (px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" height="28" align="right">
+								<tr>
+									<td valign="bottom"><img id="res_image_5" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:fnImageSend();"></td>
+									<td width="5"></td>
+									<td valign="bottom"><img id="res_image_6" src="./image/blank.gif" style="cursor:pointer" onclick="javascript:window.close();"></td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						<tr>
+							<td id="imgPreviewDummy" height="27"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" height="1"></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+<!-- Upload Form Action Area : Start -->
+<iframe name="ifrmUpload" src="" style="display:none" width="0" height="0" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0"></iframe>
+<!-- Upload Form Action Area : End -->
+
+<div id="uploadStatus" style="display:none">
+	<div class="UploadStatus" style="top:0;left:0;width:600;height:230"></div>
+	<div class="UploadStatus" style="top:230;left:0;width:160;height:80"></div>
+	<div class="UploadStatusBar" style="top:230;left:160;width:280;height:80"><img id="res_image_7"  src="./image/blank.gif"></div>
+	<div class="UploadStatus" style="top:230;left:440;width:160;height:80"></div>
+	<div class="UploadStatus" style="top:310;left:0;width:600;height:220"></div>
+</div>
+
+</body> 
+</html>

@@ -1,0 +1,260 @@
+body
+{
+	background-color: #F7F9FD;
+}
+
+.propWinContainer
+{
+	z-index: 10051;
+	overflow: hidden;
+	background-color: transparent;
+}
+.propWinHead
+{
+	z-index: 10051;
+	cursor: default;
+	top: 0px;
+	height: 22px;
+	background-color: transparent;
+}
+.propWinHeadTitleArea
+{
+	background-image: url(../../image/toolbar/toolbar_bg_blue.gif);
+	background-repeat: repeat-x;
+	display: inline-table;
+}
+.propWinHeadTitle
+{
+	margin-left: 14px;
+	margin-top: 4px;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #000000;
+	font-family: ±¼¸²;
+}
+.propWinMain
+{
+	z-index: 10051;
+	top: 32px;
+	overflow: hidden;
+	background-color: white;
+}
+
+.propWinHeadTab
+{
+	height: 18px;
+	padding-top: 3px;
+	border: #316ac5 1px solid;
+	background-color: #F9F8F7;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #00006F;
+	font-family: ±¼¸²;
+}
+.propWinHeadTab_Over
+{
+	height: 18px;
+	padding-top: 3px;
+	border: #316ac5 1px solid;
+	background-color: #dff1ff;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #00006F;
+	font-family: ±¼¸²;
+}
+.propWinHeadTab_Down
+{
+	height: 18px;
+	padding-top: 3px;
+	border: #316ac5 1px solid;
+	background-color: #c1ddee;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #00006F;
+	font-family: ±¼¸²;
+}
+.propWinHeadTab_Up
+{
+	height: 18px;
+	padding-top: 3px;
+	border: #316ac5 1px solid;
+	background-color: #c1d2ee;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #00006F;
+	font-family: ±¼¸²;
+}
+
+
+.PropContent_Container_Outer
+{
+	width: 100%;
+	border: 0;
+	background-color: #F7F9FD;
+}
+.PropContent_Container
+{
+	width: 100%;
+	border: 0;
+	background-color: #F7F9FD;
+}
+.PropContent_Title
+{
+	margin-left: 3px;
+	margin-top: 3px;
+
+	font-weight: bold;
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+}
+.PropContent_Caption
+{
+	margin-left: 3px;
+	margin-top: 3px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+}
+.PropContent_Separator
+{
+	height: 1px;
+	background-color: #B2CBFF;
+}
+.PropContent_Garbage
+{
+	height: 2px;
+}
+.PropContent_ItemContainer
+{
+	background-color: #B2CBFF;
+}
+.PropContent_ItemHeadArea
+{
+	width: 90px;
+	background-color: #F9F8F7;
+}
+.PropContent_Item
+{
+	background-color: #F9F8F7;
+}
+
+.PropContentInput
+{
+	width: 100%;
+	height: 16px;
+	border: 0;
+
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #858585;
+
+	background-color: #FFFFF6;
+}
+.PropContentSelect
+{
+	width: 100%;
+	border: 0;
+
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #858585;
+
+	background-color: #FFFFF6;
+}
+
+.PropContent_SubTitle
+{
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+}
+
+.PropContentInput_Sub
+{
+	width: 60;
+	text-align:right;
+	height: 16px;
+	border: 0;
+
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #858585;
+
+	background-color: #FFFFF6;
+}
+
+.propTableCell
+{
+	width:12;
+	height:10;
+	cursor:pointer;
+}
+.propTable_Separator
+{
+	width: 1;
+	background-color: #B2CBFF;
+}
+.propTable_AllCell
+{
+	width: 80;
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #00000F;
+}
+
+.propColor
+{
+	border: 0;
+	background-color: #336699;
+}
+.propColor_Color
+{
+	width: 16;
+	height: 16;
+
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #00000F;
+}
+.propColor_Code
+{
+	font-family: ±¼¸²;
+	font-size: 9pt;
+	color: #00000F;
+}
+.propCall
+{
+	cursor:pointer;
+}
+
+.PropImagePreview
+{
+	padding: 1px;
+	width: 100px;
+	height: 100px;
+
+	border: #316ac5 1px solid;
+	background-color: #F7F8FD;
+}
+
+.propWinCellStyle
+{
+	padding: 1px;
+}
+.propWinCellStyle_Over
+{
+	padding: 0px;
+	border: #316ac5 1px solid;
+}
+.propWinCellStyle_Select
+{
+	padding: 0px;
+	border: #FF0000 1px solid;
+}

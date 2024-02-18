@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv=Cache-Control content=No-Cache>
+<meta http-equiv=Pragma	content=No-Cache>
+
+<title>InnoDitor Product Help</title>
+<script language="javascript">
+var nSelectedTabIndex = 0;
+
+function fnHelpTabOver(objTab, nTabIndex)
+{
+	if(nSelectedTabIndex != nTabIndex)
+	{
+		if((null != objTab.children) && ("undefined" != objTab.children))
+		{
+			objTab.children[0].style.display = "none";
+			objTab.children[1].style.display = "";
+		}
+		else if(objTab.childNodes)
+		{
+			objTab.childNodes[0].style.display = "none";
+			objTab.childNodes[1].style.display = "";
+		}
+	}
+}
+
+function fnHelpTabOut(objTab, nTabIndex)
+{
+	if(nSelectedTabIndex != nTabIndex)
+	{
+		if((null != objTab.children) && ("undefined" != objTab.children))
+		{
+			objTab.children[0].style.display = "";
+			objTab.children[1].style.display = "none";
+		}
+		else if(objTab.childNodes)
+		{
+			objTab.childNodes[0].style.display = "";
+			objTab.childNodes[1].style.display = "none";
+		}
+	}
+}
+
+function fnHelpTabClick(nTabIndex)
+{
+	nSelectedTabIndex = nTabIndex;
+
+	for(var i=0; i<5; i++)
+	{
+		var objTab = document.getElementById("helpTab_" + i);
+		if(i != nTabIndex)
+		{
+			if((null != objTab.children) && ("undefined" != objTab.children))
+			{
+				objTab.children[0].style.display = "";
+				objTab.children[1].style.display = "none";
+			}
+			else if(objTab.childNodes)
+			{
+				objTab.childNodes[0].style.display = "";
+				objTab.childNodes[1].style.display = "none";
+			}
+		}
+	}
+
+	var strHelpURL = "./help/ifrm_help_en_" + nTabIndex + ".html";
+
+	var objFrame = document.getElementById("ifrmHelp");
+	objFrame.src = strHelpURL;
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="670">
+<tr>
+	<td>
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td height="10"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="670">
+		<tr>
+			<td valign="top">
+
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" background="./help/image/help_tab_bg.gif">
+				<tr>
+					<td id="helpTab_0" valign="bottom" width="77" onmouseover="javascript:fnHelpTabOver(this,0);" onmouseout="javascript:fnHelpTabOut(this,0);" onclick="javascript:fnHelpTabClick(0);" style="cursor:pointer;"><img src="./help/image/en/help_tab_0.gif" style="display:none"><img src="./help/image/en/help_tab_0_r.gif"></td>
+					<td width="2"></td>
+					<td id="helpTab_1" valign="bottom" width="77" onmouseover="javascript:fnHelpTabOver(this,1);" onmouseout="javascript:fnHelpTabOut(this,1);" onclick="javascript:fnHelpTabClick(1);" style="cursor:pointer;"><img src="./help/image/en/help_tab_1.gif"><img src="./help/image/en/help_tab_1_r.gif" style="display:none"></td>
+					<td width="2"></td>
+					<td id="helpTab_2" valign="bottom" width="77" onmouseover="javascript:fnHelpTabOver(this,2);" onmouseout="javascript:fnHelpTabOut(this,2);" onclick="javascript:fnHelpTabClick(2);" style="cursor:pointer;"><img src="./help/image/en/help_tab_2.gif"><img src="./help/image/en/help_tab_2_r.gif" style="display:none"></td>
+					<td width="2"></td>
+					<td id="helpTab_3" valign="bottom" width="77" onmouseover="javascript:fnHelpTabOver(this,3);" onmouseout="javascript:fnHelpTabOut(this,3);" onclick="javascript:fnHelpTabClick(3);" style="cursor:pointer;"><img src="./help/image/en/help_tab_3.gif"><img src="./help/image/en/help_tab_3_r.gif" style="display:none"></td>
+					<td width="2"></td>
+					<td id="helpTab_4" valign="bottom" width="77" onmouseover="javascript:fnHelpTabOver(this,4);" onmouseout="javascript:fnHelpTabOut(this,4);" onclick="javascript:fnHelpTabClick(4);" style="cursor:pointer;"><img src="./help/image/en/help_tab_4.gif"><img src="./help/image/en/help_tab_4_r.gif" style="display:none"></td>
+					<td>&nbsp;</td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="10"></td>
+				</tr>
+				</table>
+
+				<iframe id="ifrmHelp" name="ifrmHelp" width="670" height="610" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" src="./help/ifrm_help_en_0.html"></iframe>
+
+			</td>
+		</tr>
+		</table>
+
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

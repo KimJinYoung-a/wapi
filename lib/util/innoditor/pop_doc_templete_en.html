@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>InnoDitor Document Templete</title>
+<link rel="stylesheet" href="./css/en/uploadstyle.css">
+
+<script language="javascript" src="./js/browser.js"></script>
+<script language="javascript">
+function fnDocMouseOver(objElement)
+{
+	objElement.style.backgroundColor = "#FFFADD";
+}
+
+function fnDocMouseOut(objElement)
+{
+	objElement.style.backgroundColor = "#FFFFFF";
+}
+
+function fnDocClick(nDocNumber)
+{
+	var strValue = "";
+
+	if((0 == nDocNumber) || (2 == nDocNumber) || (4 == nDocNumber))
+	{
+		strValue = document.frmSample["txtaSample_0"].value;
+	}
+	else
+	{
+		strValue = document.frmSample["txtaSample_1"].value;
+	}
+
+	fnSendData(strValue);
+}
+
+function fnSendData(strReturnValue)
+{
+	// V2.1.0.1 Safari 전달방식 변경처리, Opera 추가 적용
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.wk || g_browserCHK.op)
+	{
+		opener.fnAddHTMLCode(strReturnValue);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		window.returnValue = strReturnValue;
+	}
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr valign="bottom">
+					<td height="30"><img src="./image/editwin/en/pop_doc_templete_title.gif"></td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="2"></td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0" width="565">
+				<tr>
+					<td align="left">
+						<table border="0" cellpadding="0" cellspacing="0" height="40">
+						<tr>
+							<td valign="bottom"><img src="./image/editwin/en/pop_doc_templete_tab_image_1_r.gif"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<td>
+								<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="100" height="100">
+								<tr>
+									<td align="center" bgcolor="#FFFFFF" class="textDisplay" background="./image/editwin/pop_upload_thumnail_bg.gif" onmouseover="javascript:fnDocMouseOver(this);" onmouseout="javascript:fnDocMouseOut(this);" onclick="javascript:fnDocClick(0);" style="cursor:pointer;">
+										Type 1
+									</td>
+								</tr>
+								</table>
+							</td>
+							<td>
+								<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="100" height="100">
+								<tr>
+									<td align="center" bgcolor="#FFFFFF" class="textDisplay" background="./image/editwin/pop_upload_thumnail_bg.gif" onmouseover="javascript:fnDocMouseOver(this);" onmouseout="javascript:fnDocMouseOut(this);" onclick="javascript:fnDocClick(1);" style="cursor:pointer;">
+										Type 2
+									</td>
+								</tr>
+								</table>
+							</td>
+							<td>
+								<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="100" height="100">
+								<tr>
+									<td align="center" bgcolor="#FFFFFF" class="textDisplay" background="./image/editwin/pop_upload_thumnail_bg.gif" onmouseover="javascript:fnDocMouseOver(this);" onmouseout="javascript:fnDocMouseOut(this);" onclick="javascript:fnDocClick(0);" style="cursor:pointer;">
+										Type 1
+									</td>
+								</tr>
+								</table>
+							</td>
+							<td>
+								<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="100" height="100">
+								<tr>
+									<td align="center" bgcolor="#FFFFFF" class="textDisplay" background="./image/editwin/pop_upload_thumnail_bg.gif" onmouseover="javascript:fnDocMouseOver(this);" onmouseout="javascript:fnDocMouseOut(this);" onclick="javascript:fnDocClick(1);" style="cursor:pointer;">
+										Type 2
+									</td>
+								</tr>
+								</table>
+							</td>
+							<td>
+								<table border="0" bgcolor="#C4CAD1" cellpadding="0" cellspacing="1" width="100" height="100">
+								<tr>
+									<td align="center" bgcolor="#FFFFFF" class="textDisplay" background="./image/editwin/pop_upload_thumnail_bg.gif" onmouseover="javascript:fnDocMouseOver(this);" onmouseout="javascript:fnDocMouseOut(this);" onclick="javascript:fnDocClick(0);" style="cursor:pointer;">
+										Type 1
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						<tr>
+							<td align="center" class="textDisplay" style="line-height:1.4;">
+							<b>Sample Customizing Page</b>
+							</td>
+						</tr>
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<td>
+								<table border="0" cellpadding="0" cellspacing="0" height="28" align="right">
+								<tr>
+									<td valign="bottom"><img src="./image/editwin/en/btn_cancel.gif" style="cursor:pointer" onclick="javascript:window.close();"></td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" height="1"><img src="./image/blank.gif" width="1" height="1"></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<form name="frmSample" method="post" onsubmit="return false">
+<textarea name="txtaSample_0" style="display:none">
+<table width="600" border="0" cellpadding="10" cellspacing="0" style="border-collapse:collapse;"><tr><td width="300" height="120" valign="top" style="border:#FFDDDD 1px solid;"><strong><span style="color:#FF0099">1. Title...</span></strong><br><br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br></td><td width="300" valign="top">&nbsp;</td></tr><tr><td width="300" valign="top">&nbsp;</td><td width="300" height="120" valign="top" style="border:#FFDDDD 1px solid;"><strong><font color="#FF0099">2. Title...</font></strong><br><br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br>ABCDEFG<br></td></tr><tr><td colspan="2" height="2"></td></tr><tr><td height="200" colspan="2" bgcolor="#FF3366"><table border="0" cellpadding="0" cellspacing="0"><tr><td width="200" align="center"><strong><span style="color:#FFFFFF">TITLE<br>(Title Title Title)</span></strong></td><td width="20">&nbsp;</td><td width="380"><span style="color:#FFFFFF">ABCDEFG...<br>ABCDEFG...<br>ABCDEFG...<br>ABCDEFG...<br>ABCDEFG...<br>ABCDEFG...<br></td></tr></table></td></tr></table>
+</textarea>
+
+<textarea name="txtaSample_1" style="display:none">
+<table width="580" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" style="line-height:1.4;"><tr><td width="20"></td><td width="540" valign="top"><table width="540" border="0" cellpadding="0" cellspacing="0"><tr><td height="10"></td></tr><tr><td height="150" valign="top"><table border="0" cellpadding="0" cellspacing="0"><tr><td width="170" align="center" bgcolor="#FF6600"><table border="0"><tr><td width="150" height="70" bordercolor="#FF6600" bgcolor="#000000"><strong><span style="font-size:9pt;font-family:Arial;color:#FF6600">Title's</span></strong><br><strong><span style="font-size:9pt;font-family:Arial;color:#FF6600">Title Title</span></strong></td></tr><tr><td height="30" bgcolor="#FF6600">&nbsp;</td></tr></table></td><td width="20">&nbsp;</td><td><span style="font-size:9pt;font-family:Arial;color:#FF9999">- ABCDEFG 12345667 ...</span><br><span style="font-size:9pt;font-family:Arial;color:#4E4E4E">ABCDEFG 12345667<br>ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 </span></td></tr></table></td></tr><tr><td height="32" align="center" valign="middle" bgcolor="#CCCCCC"><table border="0" cellspacing="5"><tr><td width="530" height="30" align="left" valign="middle" bgcolor="#000000">&nbsp;<strong><span style="font-size:9pt;font-family:Arial;color:#FF6600">Title' Title Title</span></strong></td></tr></table></td></tr><tr><td height="10"></td></tr><tr><td height="30"><table width="530" border="0" cellpadding="0" cellspacing="0"><tr><td width="2" bgcolor="#999999">&nbsp;</td><td width="10">&nbsp;</td><td><strong><span style="font-size:9pt;font-family:Arial;color:#999999">Title' Title Title</span></strong></td></tr></table></td></tr><tr><td><span style="font-size:9pt;font-family:Arial;color:#FF9999">- ABCDEFG 12345667 ...</span><br><span style="font-size:9pt;font-family:Arial;color:#4E4E4E">ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 </span></td></tr><tr><td>&nbsp;</td></tr><tr><td height="32" align="center" valign="middle" bgcolor="#CCCCCC"><table border="0" cellspacing="5"><tr><td width="530" height="30" align="left" valign="middle" bgcolor="#000000">&nbsp;<strong><span style="font-size:9pt;font-family:Arial;color:#FF6600">Title' Title Title</span></strong></td></tr></table></td></tr><tr><td height="10"></td></tr><tr><td height="30"><table width="530" border="0" cellpadding="0" cellspacing="0"><tr><td width="2" bgcolor="#999999">&nbsp;</td><td width="10">&nbsp;</td><td><strong><span style="font-size:9pt;font-family:Arial;color:#999999">Title' Title Title</span></strong></td></tr></table></td></tr><tr><td><span style="font-size:9pt;font-family:Arial;color:#FF9999">- ABCDEFG 12345667 ...</span><br><span style="font-size:9pt;font-family:Arial;color:#4E4E4E">ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 ABCDEFG 12345667 </span></td></tr><tr><td>&nbsp;</td></tr><tr><td align="right" bgcolor="#FF6600"><span style="font-size:9pt;font-family:Arial;color:#FFFFFF"><strong>Title' Title Title&nbsp;</strong></span></td></tr></table></td><td width="20"></td></tr></table>
+</textarea>
+</form>
+
+</body>
+</html>

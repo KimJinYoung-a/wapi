@@ -1,0 +1,387 @@
+TR.H	{ background-color: #FFE6E6}
+TR.H2	{ background-color: #CCFFCC}
+.gray {font:9pt/135% "±¼¸²";color:#AAAAAA}
+.sgray {  font-size: 8pt; line-height: 130%; color: #888888}
+.red {  font-size: 8pt; color: #FF0000; line-height: 130%; font-weight: normal; font-family: "Georgia", "Times New Roman", "Times", "serif"}
+.people2 { background-attachment: fixed; background-image: url(images/people/people2.gif); background-repeat: no-repeat; background-position: right top ; background-color: FF6D18}
+.people3 { background-attachment: fixed; background-image: url(images/people/people3.gif); background-repeat: no-repeat; background-position: left bottom}
+.id {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 9px; font-weight: bold; color: #000000}
+.white9 {  font-size: 9pt; line-height: 140%; color: #FFFFFF}
+.Q {  font-size: 9pt; font-style: normal; font-weight: normal; color: #FF6666}
+money { font-size: 8pt; line-height: 130%; color: #0099FF; text-decoration: none }
+
+a:active {  color: #000000; text-decoration: underline; font-size: 9pt}
+a:visited {  font-size: 9pt; color: #000000; text-decoration: none}
+a:link {  font-size:9pt; color: #000000; text-decoration: none}
+a:hover {  text-decoration: underline; color: #000000; font-size: 9pt}
+
+
+coment {  font-size: 8pt; color: #999999}
+.unnamed1 {  font-size: 8pt; color: #999999}
+.coment {  font-size: 8pt; color: #666666}
+.vadana {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 8pt; color: #000000; line-height: 80%}
+.vadana_xs {  font-family: "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 9px; color: #333333}
+.comment_bg {  background-attachment: fixed; background-image: url(images/memo_bg.gif); background-repeat: no-repeat; font-size: 9pt; color: #000000}
+.top_bg {  font-size: 9px; color: #000000; background-attachment: fixed; background-image: url(images/topbar_bg.gif); background-repeat: repeat-x}
+re:link {  font-size: 9pt; color: #FF3366}
+re:active {  font-size: 9pt; color: #FF3399}
+re:hover {  font-size: 9pt; color: #FF3366}
+.unnamed2 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 9px}
+.11pixel {  font-size: 11px; color: #000000}
+.verdana_9pt {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 9pt}
+
+.zzz:active {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "±¼¸²"; TEXT-DECORATION: none
+; font-weight: normal
+}
+.zzz:visited {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "±¼¸²"; TEXT-DECORATION: none
+; font-weight: normal
+}
+.zzz:hover {
+	FONT-SIZE: 9pt; font-weight: bold; COLOR: #cc0000; FONT-FAMILY: "±¼¸²"; TEXT-DECORATION: none
+; font-weight: normal
+}
+.zzz:link {
+	FONT-SIZE: 9pt; COLOR: #666666; FONT-FAMILY: "±¼¸²"; TEXT-DECORATION: none
+; font-weight: normal
+}
+
+.input {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #666666;
+
+}
+
+.input_a	 {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #BABABA;
+}
+
+.input_b {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+}
+
+.button0 {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 12px;
+	background-color: #E4E4E4;
+	border: 1px solid #000000;
+	height: 20px;
+}
+
+
+.button2 {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 12px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	color: #000000;
+	height: 20px;
+}
+
+.button3 {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	color: #000000;
+	height: 15px;
+}
+
+
+
+.textarea{font-family:µ¸¿ò;font-size:9pt;border-width:1;border-color:#2f2f2f;}
+.textarea2{font-family:µ¸¿ò;font-size:12px;border-width:1;border-color:#2f2f2f;}
+
+.page_link {  color: #000000; text-decoration: none; font-size: 9pt}
+.page_link:active {  color: #000000; text-decoration: none; font-size: 9pt}
+.page_link:visited {  font-size: 9pt; color: #000000; text-decoration: none}
+.page_link:link {  font-size:9pt; color: #000000; text-decoration: none}
+.page_link:hover {  text-decoration: none; color: #000000; font-size: 9pt}
+
+
+.font {  font-family: "µ¸¿ò"; font-size: 10pt; line-height: 15pt; font-variant: small-caps; color: #000000}
+.line {  font-family: "µ¸¿ò"; font-size: 10pt; line-height: 15pt; font-variant: small-caps; color: #000000;}
+
+.verdana-small {
+
+	font-family: "Verdana";
+	font-size: 9px;
+; line-height: 130%
+}
+
+.verdana-mid {
+
+	font-family: "Verdana";
+	font-size: 12px;
+}
+
+.verdana-large {
+
+	font-family: "Verdana";
+	font-size: 24px;
+}
+
+.sss {font:8pt/135% "±¼¸²";color:#000000}
+.input_01 {border:1px #999999 solid; font-size: 12px}
+.input_right {border:1px #999999 solid; font-size: 12px;text-align=right}
+
+
+.csbutton {
+	font-size: 12px;
+	background-color: #E6E6E6;
+	border: 1px solid #BABABA;
+	color: #000000;
+	height: 20px;
+	cursor:hand;
+}
+
+.adminbutton {
+	font-size: 12px;
+	background-color: #E6E6E6;
+	border: 1px solid #BABABA;
+	color: #000000;
+	height: 20px;
+	cursor:hand;
+}
+
+/*------------------  Editor¿ë -----------------*/
+.bt_btn_out		{border:1 solid #FFFFFF; background:#FFFFFF}
+.bt_btn_over	{border:1 solid #E9EAF3; background:#F7F7FA}
+.bt_btn_click	{border:1 solid #5C65BB; background:#E9EAF3}
+
+
+
+
+/*------------------  ¾îµå¹Î¿ë ¹öÆ° ´Ù½Ã Á¤¸®ÇÕ´Ï´Ù. ¾Æ·¡ÂÊÀ¸·Î 2007/03/31 -----------------*/
+
+
+body {font:9pt/135% "±¼¸²";color:#000000}
+p {margin-top:5px;margin-bottom:5px;}
+
+.a {font:9pt/135% "±¼¸²";color:#000000;}
+.table_tl_old {font:9pt/135% "±¼¸²";border-top:1px solid #999999;border-left:1px solid #999999;}
+.table_tl_noline_old {font:9pt/135% "±¼¸²";border-top:0px solid #999999;border-left:0px solid #999999;}
+
+.td_br {border-bottom:1px solid #999999;border-right:1px solid #999999;}
+.td_b {border-bottom:1px solid #999999;}
+.td_r {border-right:1px solid #999999;}
+
+.td_xxxx {border-right:1px solid #999999;}
+
+.table_tl
+{
+	font:9pt/135% "±¼¸²";
+
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table_tl_noline
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table_line_bottom_only_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    border-width: 0 0 1 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table_td_bottom_only_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    border-width: 0 0 0 0;
+}
+
+.table_line_top_bottom_only_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1 0 1 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table_td_top_bottom_only_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    border-width: 0 0 1 0;
+}
+
+.table_td_top_right_bottom_only_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    border-width: 0 1 1 0;
+}
+
+.td_br_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    border-width: 1px 1px 0 0;
+}
+
+.td_noline_new
+{
+	font:9pt/135% "±¼¸²";
+    border-color: #999999;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    border-width: 0 0 0 0;
+}
+
+.td_br_pink {border-bottom:1px solid #999999;border-right:1px solid #999999;background-color:pink;}
+.td_br_tablebar {border-bottom:1px solid #999999;border-right:1px solid #999999;background-color:#E6E6E6;}
+
+.td_b {border-bottom:1px solid #999999;}
+.td_b {border-bottom:1px solid #999999;}
+
+
+.tr_tablebar {background-color:#E6E6E6;}
+.tr_pink {background-color:#FFDDDD;}
+.tr_green {background-color:#DDFFDD;}
+.tr_sky {background-color:#DDDDFF;}
+.tr_gray {background-color:#EEEEEE;}
+.tr_dgray {background-color:#CCCCCC;}
+
+.font_step {font-family: "±¼¸²"; font-size:9pt/135%; font-weight: bold; color:#999999}
+
+
+.icon {
+    font-family: "Verdana", "µ¸¿ò";
+    font-size: 9pt;
+    background-color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    height: 20px;
+}
+
+.button {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #E6E6E6;
+	border: 1px outset #BABABA;
+	color: #000000;
+	height: 20px;
+	cursor:hand;
+}
+
+/* °ü¸®ÀÚ¿¡°Ô¸¸ º¸ÀÌ´Â ¹öÆ° */
+.button_auth {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #FFCC99;
+	border: 1px outset #BABABA;
+	color: #000000;
+	height: 20px;
+	cursor:hand;
+}
+
+
+/* °Ë»ö¹öÆ°¿¡¸¸ »ç¿ë */
+.button_s {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #E6E6E6;
+	border: 1px outset #BABABA;
+	color: #000000;
+	height: 20px;
+	cursor:hand;
+}
+
+.text {
+	font-family: "Verdana", "µ¸¿ò" ;
+	font-size: 9pt;
+	background-color: #FFFFFF;
+	border: 1px solid #BABABA;
+	color: #000000;
+	height: 20px;
+}
+
+/* readonly ÅØ½ºÆ®¹Ú½º¿¡¸¸ »ç¿ë */
+.text_ro {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #DDDDFF;
+	border: 1px solid #BABABA;
+	color: #000000;
+	height: 20px;
+}
+
+.textarea {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #FFFFCC;
+	border: 1px solid #BABABA;
+	color: #000000;
+}
+
+/* readonly ÅØ½ºÆ®¿¡¾î¸®¾î¿¡¸¸ »ç¿ë */
+.textarea_ro {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #DDDDFF;
+	border: 1px solid #BABABA;
+	color: #000000;
+}
+
+
+.select {
+    font-family: "Verdana", "µ¸¿ò";
+    font-size: 9pt;
+    background-color: #FFFFCC;
+    border: 1px solid #BABABA;
+    height: 20px;
+}
+
+.file {
+	font-family: "Verdana", "µ¸¿ò";
+	font-size: 9pt;
+	background-color: #FFFFCC;
+	border: 1px solid #BABABA;
+	color: #000000;
+	height: 20px;
+}

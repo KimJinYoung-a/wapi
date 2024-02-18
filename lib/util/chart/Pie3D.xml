@@ -1,0 +1,19 @@
+<chart chartBottomMargin='2' formatNumberScale='0' showLimits='0' divLineThickness='1' decimalPrecision='1' chartTopMargin='2' showShadow='1' canvasBorderColor='CBCBCB' animation='1' baseFontColor='666666' bgColor='FFFFFF' formatNumber='1' nameTBDistance='25' legendBorderColor='FFFFFF' canvasPadding='3' legendBgColor='FFFFFF' chartRightMargin='2' legendPadding='2' legendShadow='0' pieYScale='70' divLineIsDashed='1' showPercentValues='1' showBorder='0' pieSliceDepth='10' legendBorderThickness='0' placeValuesInside='1' chartLeftMargin='0' canvasBorderThickness='1' baseFontSize='11' divLineDashGap='3' setAdaptiveYMin='1' plotBorderAlpha='20' >
+	<set value='47888' name='네이버' color='006990' />
+	<set value='1067' name='엠파스' color='FF6F00' />
+	<set value='828' name='다음' color='A6353D' />
+	<set value='523' name='구글' color='CCB034' />
+	<set value='443' name='야후' color='26DDD8' />
+<trendLines></trendLines>
+<styles>
+	<definition>
+		<style name='shadow215' type='shadow' angle='215' distance='3'/>
+		<style name='shadow45' type='shadow' angle='45' distance='3'/>
+	</definition>
+	<application>
+		<apply toObject='DATAPLOTCOLUMN' styles='shadow215' />
+		<apply toObject='DATAPLOTLINE' styles='shadow215' />
+		<apply toObject='DATAPLOT' styles='shadow215' />
+	</application>
+	</styles>
+</chart>

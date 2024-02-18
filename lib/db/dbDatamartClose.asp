@@ -1,0 +1,5 @@
+<%
+
+dbDatamart_dbget.Close
+
+%>

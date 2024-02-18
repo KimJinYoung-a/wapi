@@ -1,0 +1,63 @@
+﻿.MenuContainer
+{
+	z-index: 10021;
+	position: absolute;
+	display: hidden;
+}
+
+.MenuContent
+{
+	width: 100%;
+	border: 0px;
+}
+.MenuItem
+{
+	cursor: default;
+	height: 22px;
+}
+.MenuItem_Blank
+{
+	border:0px;
+	width: 6px;
+	background-color: #F9F8F7;
+}
+.MenuItem_Caption
+{
+	height: 18px;
+
+	padding-top: 2px;
+	padding-left: 6px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	background-color: #F9F8F7;
+
+	border:0px;
+}
+.MenuSeparator
+{
+	height: 1px;
+}
+.MenuItem_Separator
+{
+	height: 1px;
+	background-color: #A6A6A6;
+}
+.MenuItem_Garbage
+{
+	height: 1px;
+}
+.MenuItem_Garbage_Area
+{
+	background-color: #F9F8F7;
+}
+
+
+.ContextMenuContainer
+{
+	z-index: 10022;
+	position: absolute;
+	display: hidden;
+}

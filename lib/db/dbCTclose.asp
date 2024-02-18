@@ -1,0 +1,3 @@
+<%
+dbCTget.Close
+%>

@@ -1,0 +1,54 @@
+﻿.tbSizeBoxBG
+{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background-color: #5591c3;
+}
+.tbSizeBoxWindow
+{
+	z-index: 10302;
+	position: absolute;
+	background-color: transparent;
+}
+.tbSizeBoxStatusText
+{
+	font-size: 9pt;
+	color: #00000F;
+	font-family: Arial;
+}
+
+.tbResizeLineContainer
+{
+	z-index:10061;
+	position:absolute;
+	top:-100;
+	left:-100;
+	width:1;
+	height:1;
+}
+.tbResizeLine
+{
+	width:100%;
+	height:100%;
+	padding: 1px;
+	border: #336699 1px dashed;
+}
+
+.tableTempleteCell
+{
+	border:0px;
+	padding: 0px;
+
+	cursor:default;
+	width: 100px;
+	height: 76px;
+	background-color: #F9F8F7;
+}
+.tableTempleteSelectionCaption
+{
+	cursor:default;
+	font-family: Arial;
+	font-size: 9pt;
+	color: #00000F;
+}

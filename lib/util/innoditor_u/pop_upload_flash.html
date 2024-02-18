@@ -1,0 +1,464 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>이노디터(InnoDitor) 플래시 업로드</title>
+<link rel="stylesheet" href="./css/ko/uploadstyle.css">
+
+<script language="javascript" src="./js/browser.js"></script>
+<script language="javascript" src="./js/uploadflash.js"></script>
+<script language="javascript">
+// customer 셋팅 변수
+var g_strUploadPath_Flash = "/z_experience/upload_tran_u.asp";
+</script>
+
+<script language="javascript">
+function fnFlashSend()
+{
+	var strFlashURL = "";
+
+	if(1 == g_nSelectedTabIndex)
+	{
+		if("" == g_objUploadObjectProp.upload_url)
+		{
+			alert("플래시 업로드를 먼저 하세요");
+			return;
+		}
+
+		strFlashURL = g_objUploadObjectProp.upload_url;
+	}
+	else
+	{
+		if("" == g_objLoadURLObjectProp.flash_url)
+		{
+			alert("플래시 URL 입력 후 미리보기를 먼저 하세요");
+			return;
+		}
+
+		strFlashURL = g_objLoadURLObjectProp.flash_url;
+	}
+
+
+	if("" != document.getElementById("txtWidth").value)
+	{
+		if(isNaN(document.getElementById("txtWidth").value))
+		{
+			alert("숫자만 입력 가능합니다");
+			document.getElementById("txtWidth").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtHeight").value)
+	{
+		if(isNaN(document.getElementById("txtHeight").value))
+		{
+			alert("숫자만 입력 가능합니다");
+			document.getElementById("txtHeight").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtBorder").value)
+	{
+		if(isNaN(document.getElementById("txtBorder").value))
+		{
+			alert("숫자만 입력 가능합니다");
+			document.getElementById("txtBorder").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtHSpace").value)
+	{
+		if(isNaN(document.getElementById("txtHSpace").value))
+		{
+			alert("숫자만 입력 가능합니다");
+			document.getElementById("txtHSpace").focus();
+			return;
+		}
+	}
+
+	if("" != document.getElementById("txtVSpace").value)
+	{
+		if(isNaN(document.getElementById("txtVSpace").value))
+		{
+			alert("숫자만 입력 가능합니다");
+			document.getElementById("txtVSpace").focus();
+			return;
+		}
+	}
+
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = strFlashURL;
+	arrReturnValue[1] = document.getElementById("txtWidth").value;
+	arrReturnValue[2] = document.getElementById("txtHeight").value;
+	arrReturnValue[3] = document.getElementById("selAlign").value;
+	arrReturnValue[4] = document.getElementById("txtBorder").value;
+	arrReturnValue[5] = document.getElementById("txtHSpace").value;
+	arrReturnValue[6] = document.getElementById("txtVSpace").value;
+
+	if(g_browserCHK.wk || g_browserCHK.op)
+	{
+		opener.fnSetFlashReturnValue(arrReturnValue);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		window.returnValue = arrReturnValue;
+	}
+
+
+/*
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	// 부모창의 고객사 정의 함수를 추가적으로 호출하고자 하는 경우
+	if((null != window.dialogArguments) && ("undefined" != window.dialogArguments))
+	{
+		var objParentWindow = window.dialogArguments;
+		objParentWindow.fnParentFunction();// 이노디터를 포함하고 있는 window에 정의되어 있는 함수명이어야 함
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////
+//*/
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7" onload="javascript:fnAdjustPage();">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr valign="bottom">
+					<td height="30"><img src="./image/editwin/ko/pop_upload_flash_title.gif"></td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" width="1"></td>
+			<td bgcolor="#FFFFFF" width="1"></td>
+			<td bgcolor="#f7f7f7" align="center">
+
+				<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="2"></td>
+				</tr>
+				</table>
+
+				<table border="0" cellpadding="0" cellspacing="0" width="565">
+				<tr>
+					<td align="left">
+						<table border="0" cellpadding="0" cellspacing="0" height="40">
+						<tr>
+							<td valign="bottom"><img id="imgTab_1" src="./image/editwin/ko/pop_upload_tab_flash_1_r.gif" style="cursor:pointer;" onmouseover="javascript:fnTabMouseOver(this,1);" onmouseout="javascript:fnTabMouseOut(this,1);" onclick="javascript:fnTabClick(1);"></td>
+							<td width="3"></td>
+							<td valign="bottom"><img id="imgTab_2" src="./image/editwin/ko/pop_upload_tab_flash_2.gif" style="cursor:pointer;" onmouseover="javascript:fnTabMouseOver(this,2);" onmouseout="javascript:fnTabMouseOut(this,2);" onclick="javascript:fnTabClick(2);"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#d2d2d2"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td height="1" bgcolor="#ffffff"><img src="./image/blank.gif" width="1" height="1"></td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="5"></td>
+						</tr>
+						</table>
+
+						<table height="24" border="0" cellpadding="0" cellspacing="0">
+						<tr valign="top">
+							<td width="400">
+								<input type="text" id="txtFlashPath" name="txtFlashPath" class="form" style="width:400px" maxlength="512" value="">
+							</td>
+							<td width="12"></td>
+							<td>
+								<table id="flashUploadArea" border="0" cellpadding="0" cellspacing="0">
+								<tr valign="top">
+									<td width="70">
+										<form name="frmUpload" method="post" enctype="multipart/form-data" onsubmit="return false">
+										<span class="UploadFileContainer"><input type="file" id="fileUpload" name="fileUpload" class="UploadFile" style="cursor:pointer;" onchange="javascript:fnChangeFile(this.value);"></span>
+										<input type="hidden" name="hdnUploadType" value="2">
+										</form>
+									</td>
+									<td width="70" align="right"><img src="./image/editwin/ko/btn_upload.gif" style="cursor:pointer;" onclick="javascript:fnUploadFile();"></td>
+									<td width="5"></td>
+								</tr>
+								</table>
+
+								<table id="flashLoadURLArea" style="display:none" border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										<img src="./image/editwin/ko/btn_url_load.gif" style="cursor:pointer;" onclick="javascript:fnLoadURLFlash();">
+									</td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td width="400">
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td id="flash_main" align="center" width="400" height="400" style="border:#c4cad1; border-style: solid; border-width: 1px 1px 1px 1px;" bgcolor="#ffffff" background="./image/editwin/pop_upload_thumnail_bg.gif"><img src="./image/editwin/ko/pop_upload_image_main_title_1.gif" border="0"></td>
+								</tr>
+								</table>
+
+							</td>
+							<td width="12"></td>
+							<td>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center">
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td align="center" class="textDisplay">SWF 파일 (업로드시에는</td>
+										</tr>
+										<tr>
+											<td height="2"></td>
+										</tr>
+										<tr>
+											<td align="center" class="textDisplay">1024K 이하만 가능, 외부</td>
+										</tr>
+										<tr>
+											<td height="2"></td>
+										</tr>
+										<tr>
+											<td align="center" class="textDisplay">링크는 파일크기와 무관)</td>
+										</tr>
+										<tr>
+											<td height="6"></td>
+										</tr>
+										<tr>
+											<td align="center" class="textDisplay">(외부링크: ...sample_1.swf</td>
+										</tr>
+										<tr>
+											<td height="2"></td>
+										</tr>
+										<tr>
+											<td align="center" class="textDisplay">~ ...sample_10.swf 샘플)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="26"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td height="20">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td height="1" bgcolor="dedede"></td>
+										</tr>
+										<tr>
+											<td height="1" bgcolor="ffffff"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="textDisplay" height="20"><b>플래시 크기(선택)</b></td>
+								</tr>
+								<tr>
+									<td>
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="85">너비(width)</td>
+											<td><input id="txtWidth" name="txtWidth" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="300"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20">(px)</td>
+										</tr>
+										</table>
+
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="85">높이(height)</td>
+											<td><input id="txtHeight" name="txtHeight" type="text" class="form" style="width:40px;text-align:right" maxlength="5" value="300"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20">(px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="textDisplay" height="20"><b>정렬방식(선택)</b></td>
+								</tr>
+								<tr>
+									<td>
+										<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td>
+												<select id="selAlign" name="selAlign" class="form" style="width:124px">
+													<option value="">없음</option>
+													<option value="left">왼쪽</option>
+													<option value="middle">가운데</option>
+													<option value="right">오른쪽</option>
+													<option value="top">위쪽</option>
+													<option value="bottom">아래쪽</option>
+													<option value="baseline">기준선</option>
+													<option value="texttop">글자 위</option>
+													<option value="absmiddle">선택영역 중간</option>
+													<option value="absbottom">선택영역 아래</option>
+												</select>
+											</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="textDisplay" height="20"><b>테두리(선택)</b></td>
+								</tr>
+								<tr>
+									<td>
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="95">테두리(border)</td>
+											<td><input id="txtBorder" name="txtBorder" type="text" class="form" style="width:20px;text-align:right" maxlength="2" value="0"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="30"> (px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="textDisplay" height="20"><b>수평/수직 간격(선택)</b></td>
+								</tr>
+								<tr>
+									<td>
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="105">가로간격(hspace)</td>
+											<td><input id="txtHSpace" name="txtHSpace" type="text" class="form" style="width:20px;text-align:right" maxlength="2" value="0"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20"> (px)</td>
+										</tr>
+										</table>
+
+										<table height="20" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="textDisplay" width="105">세로간격(vspace)</td>
+											<td><input id="txtVSpace" name="txtVSpace" type="text" class="form" style="width:20px;text-align:right" maxlength="2" value="0"></td>
+											<td width="5"></td>
+											<td class="textDisplay" width="20"> (px)</td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								</table>
+
+								<table border="0" cellpadding="0" cellspacing="0" height="28" align="right">
+								<tr>
+									<td valign="bottom"><img src="./image/editwin/ko/btn_apply.gif" style="cursor:pointer;" onclick="javascript:fnFlashSend();"></td>
+									<td width="5"></td>
+									<td valign="bottom"><img src="./image/editwin/ko/btn_cancel.gif" style="cursor:pointer;" onclick="javascript:window.close();"></td>
+								</tr>
+								</table>
+
+							</td>
+						</tr>
+						</table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#e2e2e2" width="1"></td>
+		</tr>
+		</table>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#e2e2e2" height="1"></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+<!-- Upload Form Action Area : Start -->
+<iframe name="ifrmUpload" src="" style="display:none" width="0" height="0" border="0" frameborder="0" framespacing="0" marginheight="0" marginwidth="0"></iframe>
+<!-- Upload Form Action Area : End -->
+
+<div id="uploadStatus" style="display:none">
+	<div class="UploadStatus" style="top:0;left:0;width:600;height:230"></div>
+	<div class="UploadStatus" style="top:230;left:0;width:160;height:80"></div>
+	<div class="UploadStatusBar" style="top:230;left:160;width:280;height:80"><img src="./image/editwin/ko/pop_upload_status.gif"></div>
+	<div class="UploadStatus" style="top:230;left:440;width:160;height:80"></div>
+	<div class="UploadStatus" style="top:310;left:0;width:600;height:220"></div>
+</div>
+
+</body> 
+</html>

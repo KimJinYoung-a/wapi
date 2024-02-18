@@ -1,0 +1,27 @@
+BODY
+{
+	font-family:굴림;
+	font-size:10pt;
+	color:#000000;
+	line-height:normal;
+}
+
+TD
+{
+	font-family:굴림;
+	font-size:10pt;
+	color:#000000;
+	line-height:normal;
+}
+
+P
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+BLOCKQUOTE
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}

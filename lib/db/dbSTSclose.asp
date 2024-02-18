@@ -1,0 +1,3 @@
+<%
+dbSTSget.Close
+%>

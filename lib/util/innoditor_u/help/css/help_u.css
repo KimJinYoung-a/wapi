@@ -1,0 +1,36 @@
+﻿.outline {
+	border-right: #c4cad1 1px solid; border-top: #c4cad1 1px solid; border-left: #c4cad1 1px solid; border-bottom: #c4cad1 1px solid
+}
+.help_item {
+	border: #c4cad1 1px solid;
+	width: 80px;
+	background-image: url(../image/help_item_bg.gif);
+	background-repeat: repeat-x;
+	cursor:default;
+	cursor:pointer;
+}
+.help_item_r {
+	border: #c4cad1 1px solid;
+	width: 80px;
+	background-image: url(../image/help_item_bg_r.gif);
+	background-repeat: repeat-x;
+	cursor:default;
+	cursor:pointer;
+}
+
+.help_item_2 {
+	border: #c4cad1 1px solid;
+	width: 97px;
+	background-image: url(../image/help_item_bg.gif);
+	background-repeat: repeat-x;
+	cursor:default;
+	cursor:pointer;
+}
+.help_item_2_r {
+	border: #c4cad1 1px solid;
+	width: 97px;
+	background-image: url(../image/help_item_bg_r.gif);
+	background-repeat: repeat-x;
+	cursor:default;
+	cursor:pointer;
+}

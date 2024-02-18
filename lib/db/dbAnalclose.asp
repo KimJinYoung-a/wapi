@@ -1,0 +1,3 @@
+<%
+dbAnalget.Close
+%>

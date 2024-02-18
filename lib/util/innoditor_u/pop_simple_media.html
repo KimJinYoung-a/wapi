@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>이노디터(InnoDitor) 미디어 업로드 연동 설명</title>
+<style>
+BODY { FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY: 굴림; }
+TD { FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY: 굴림; }
+</style>
+
+<script language="javascript" src="./js/browser.js"></script>
+<script language="javascript">
+function fnMediaSend()
+{
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = "http://www.innoditor.com/sample/media/sample_1.wmv";// src
+	arrReturnValue[1] = "300";// width
+	arrReturnValue[2] = "300";// height
+	arrReturnValue[3] = "true";// 도구바 보이기 "true" -> 보이기, "false" -> 감추기
+	arrReturnValue[4] = "true";// 재생상태 보이기 "true" -> 보이기, "false" -> 감추기
+
+	window.returnValue = arrReturnValue;
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7">
+
+<br>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+		고객사에서 미디어 업로드 구현할 페이지입니다.<br>
+		본 샘플은 이노디터에게 전달되어야 하는 내용만 표현하고자 단순화하여 제공한 샘플입니다.<br><br>
+
+		이노디터는 본 샘플처럼 미디어 관련 내용만 전달받으면 되기 때문에<br>
+		자체적으로 화면 페이지를 자유롭게 구성하신 후 전달값만 정확히 처리해 주시면 됩니다.<br>
+		(<span style="color:blue"><b>전달값 - 본 샘플 페이지의 소스 부분을 확인 또는 매뉴얼 참조</b></span>)
+		<br><br><br><br><br>
+
+
+
+
+		이노디터에서 제공하는 샘플을 사용하고자 하시는 경우<br>
+		innoditor > js > customize.js 에서<br><br>
+
+		<span style="color:blue">var g_strUploadMediaURL = "/innoditor/pop_simple_media.html";</span><br>
+		--><br>
+		<span style="color:blue">var g_strUploadMediaURL = "/innoditor/pop_upload_media.html";</span><br><br>
+		변경하신 후 매뉴얼과 샘플페이지를 참조하시어 고객사 업로드 관련 서버 모듈과 연동하셔야 합니다.<br>
+		(<span style="color:red"><b>이노디터 제공 샘플 페이지 자체가 업로드를 진행하지는 않습니다</b></span>)
+		<br>
+		<span style="color:red"><b>미디어는 Internet Explorer(IE)에서만 사용하실 수 있습니다</b></span>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<table border="0" cellpadding="0" cellspacing="0" height="28">
+		<tr>
+			<td valign="bottom"><a href="javascript:fnMediaSend();">미디어전달</a></td>
+			<td width="30"></td>
+			<td valign="bottom"><a href="javascript:window.close();">창 닫기</a></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+</body> 
+</html>

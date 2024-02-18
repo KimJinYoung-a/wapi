@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="now" />
+<meta http-equiv="Cache-Control" content="private" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>InnoDitor Preview</title>
+<link rel="stylesheet" type="text/css" href="./css/preview.css" />
+
+
+<!--
+case 1  이노디터 기본글꼴과 글크기를 기본 제공값이 아닌 다른 값으로 변경하여
+		사용하는 경우, 가령 한국어인 경우
+		innoditor > css > ko > preview_default.css 에서
+		변경할려는 기본글꼴과 글크기로 설정 처리
+
+case 2	동적으로 이노디터 기본글꼴과 글크기가 변경되는 경우는
+		browserlanguage.js, browserpreview.js 2개의 script를 주석처리하고
+		아래 <style></style> 부분에서 직접 변경 처리
+-->
+<script language="javascript" src="./js/browserlanguage.js"></script>
+<script language="javascript">
+// language force setting - japanese
+g_browserCHK.language = "ja";
+</script>
+<script language="javascript" src="./js/browserpreview.js"></script>
+
+<style type="text/css">
+/*<![CDATA[*/
+/*
+body		{font-family:Arial; font-size:10pt; color:#000000;line-height:normal;}
+td			{font-family:Arial; font-size:10pt; color:#000000;line-height:normal;}
+p			{margin-top:2px;margin-bottom:2px;}
+blockquote	{margin-top:2px;margin-bottom:2px;}
+*/
+/*]]>*/
+</style>
+
+<script language="javascript">
+//<![CDATA[
+function fnLoadPreview()
+{
+	var strBackgroundColor = "";
+	var strBackgroundImage = "";
+	var strBackgroundRepeat = "";
+
+	if((null != window.dialogArguments) && ("undefined" != window.dialogArguments))
+	{
+		var objPreviewParam = window.dialogArguments;
+		document.body.innerHTML = objPreviewParam.previewHTML;
+
+		strBackgroundColor = objPreviewParam.previewBody.style.backgroundColor;
+		strBackgroundImage = objPreviewParam.previewBody.style.backgroundImage;
+		strBackgroundRepeat = objPreviewParam.previewBody.style.backgroundRepeat;
+
+		if((null != strBackgroundImage) && ("" != strBackgroundImage))
+		{
+			document.body.style.backgroundImage = strBackgroundImage;
+		}
+	}
+	else
+	{
+		document.body.innerHTML = opener.fnGetEditorHTML();
+
+		strBackgroundColor = opener.fnGetBodyStyleValue(1, -1);
+		strBackgroundImage = opener.fnGetBodyStyleValue(2, -1);
+		strBackgroundRepeat = opener.fnGetBodyStyleValue(3, -1);
+
+		if((null != strBackgroundImage) && ("" != strBackgroundImage))
+		{
+			document.body.style.backgroundImage = "url(" + strBackgroundImage + ")";
+		}
+	}
+
+
+	if((null != strBackgroundColor) && ("" != strBackgroundColor))
+	{
+		document.body.style.backgroundColor = strBackgroundColor;
+	}
+
+	if((null != strBackgroundRepeat) && ("" != strBackgroundRepeat))
+	{
+		document.body.style.backgroundRepeat = strBackgroundRepeat;
+	}
+}
+//]]>
+</script>
+</head>
+
+<body onload="fnLoadPreview();" style="margin-left:11px;margin-top:10px;">
+</body>
+</html>

@@ -1,0 +1,715 @@
+﻿.tbToolbarSetBG_Gray
+{
+	background-image: url(../../image/toolbar/toolbar_bg_gray.gif);
+	background-repeat: repeat-x;
+	display: inline-table;
+}
+.tbHandleDiv_Gray
+{
+	background-image: url(../../image/toolbar/toolbar_handle_gray.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	margin: 0px;
+	width: 7px;
+	height: 22px;
+}
+.tbSeparator_Gray
+{
+	background-color: #cccccc;
+	margin: 2px;
+	width: 1px;
+	height: 16px;
+}
+
+.tbButton_Gray
+{
+	width: 20px;
+	height: 20px;
+}
+.tbButton_Over_Gray
+{
+	margin: 0px ;
+	border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+
+	width: 20px;
+	height: 20px;
+}
+.tbButton_Down_Gray
+{
+    margin: 0px;
+	border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+
+	width: 20px;
+	height: 20px;
+}
+.tbButton_Up_Gray
+{
+    margin: 0px;
+	border: #7d7d7d 1px solid;
+	background-color: #d1d1d1;
+
+	width: 20px;
+	height: 20px;
+}
+
+
+.tbDropDown_Area_Gray
+{
+	width: 30px;
+	height: 20px;
+	cursor: default;
+}
+.tbDropDown_AreaOver_Gray
+{
+	width: 30px;
+	height: 20px;
+
+	cursor: default;
+	border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+}
+.tbDropDown_AreaArrowOver_Gray
+{
+	border-left: #7d7d7d 1px solid;
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_buttonarrow.gif);
+	width: 8px;
+	height: 20px;
+	background-repeat: no-repeat;
+}
+.tbDropDown_AreaDown_Gray
+{
+	width: 30px;
+	height: 20px;
+
+	border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+}
+.tbDropDown_AreaArrowDown_Gray
+{
+	border-left: 0px;
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_buttonarrow.gif);
+	width: 8px;
+	height: 20px;
+	background-repeat: no-repeat;
+}
+
+.tbDropDown_AreaUp_Gray
+{
+	width: 30px;
+	height: 20px;
+
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: 0px;
+    background-color: #ffffff;
+}
+.tbDropDown_AreaUp_Gray	.tbDropDown_AreaButton
+{
+    background-color: #F9F8F7;
+}
+.tbDropDown_AreaArrowUp_Gray
+{
+	border-left: 0px;
+	background-position: center center;
+	background-image: url(../../image/toolbar/toolbar_buttonarrow.gif);
+	width: 8px;
+	height: 20px;
+	background-repeat: no-repeat;
+}
+
+
+.tbComboBox_Area_Gray
+{
+	cursor: default;
+	margin-top: 1px;
+	border: #b7b7a6 1px solid;
+}
+.tbComboBox_AreaOver_Gray
+{
+	margin-top: 1px;
+	cursor: default;
+    border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+}
+.tbComboBox_AreaOver_Gray .tbComboBox_AreaArrow
+{
+    border-left: #7d7d7d 1px solid;
+}
+.tbComboBox_AreaUp_Gray
+{
+	margin-top: 1px;
+    border: #7d7d7d 1px solid;
+    background-color: #b0c4de;
+}
+.tbComboBox_AreaUp_Gray .tbComboBox_AreaArrow
+{
+    border-left: #7d7d7d 1px solid;
+}
+.tbComboBox_AreaDown_Gray
+{
+	margin-top: 1px;
+	border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+}
+.tbComboBox_AreaDown_Gray .tbComboBox_AreaArrow
+{
+    border-left: #7d7d7d 1px solid;
+}
+
+
+.tbMenu_Area_Gray
+{
+	border: 0px solid;
+
+	margin-top: 3px;
+	margin-bottom: 0px;
+	padding-top: 1px;
+
+	height: 16px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbMenu_AreaOver_Gray
+{
+    border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbMenu_AreaDown_Gray
+{
+    border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbMenu_AreaUp_Gray
+{
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: 0px;
+	background-color: #F9F8F7;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbMenu_Area_Gray_FF
+{
+	border: 0px solid;
+
+	margin-top: 2px;
+	margin-bottom: 0px;
+	padding-top: 1px;
+
+	height: 16px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tbMenu_AreaOver_Gray_FF
+{
+    border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+
+	margin-top: 1px;
+	margin-bottom: 0px;
+
+	padding-top: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	white-space: nowrap;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.MenuItem_Icon_Gray
+{
+	padding-left: 1px;
+	width: 22px;
+	border:0px;
+
+	background-image: url(../../image/toolbar/toolbar_menu_separator_gray.gif);
+}
+.MenuItem_Icon_Gray	.MenuItem_Image
+{
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	background-repeat: no-repeat;
+}
+.MenuItem_Icon_Over_Gray
+{
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+
+	padding-left: 0px;
+	width: 22px;
+	height: 18px;
+
+	background-color: #fefefe;
+}
+.MenuItem_Icon_Over_Gray	.MenuItem_Image
+{
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	background-repeat: no-repeat;
+}
+.MenuItem_Blank_Over_Gray
+{
+	border-top: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+
+	width: 6px;
+	height: 18px;
+
+	background-color: #fefefe;
+}
+.MenuItem_Icon_Over_WK_Gray
+{
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+
+	padding-left: 0px;
+	width: 22px;
+
+	background-color: #fefefe;
+}
+.MenuItem_Icon_Over_WK_Gray	.MenuItem_Image
+{
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	background-repeat: no-repeat;
+}
+.MenuItem_Blank_Over_WK_Gray
+{
+	border-top: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+
+	width: 6px;
+
+	background-color: #fefefe;
+}
+.MenuItem_Caption_Over_Gray
+{
+	height: 18px;
+
+	border-top: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+ 
+	padding-top: 2px;
+	padding-left: 6px;
+
+	font-size: 9pt;
+	color: #000000;
+	font-family: Arial;
+
+	background-color: #fefefe;
+}
+
+
+.tbTabMode_Area_Gray
+{
+    border: #7d7d7d 1px solid;
+
+	margin-top: 2px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaOver_Gray
+{
+    border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+
+	margin-top: 2px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaDown_Gray
+{
+    border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+
+	margin-top: 2px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaUp_Gray
+{
+    border: #7d7d7d 1px solid;
+	background-color: #d1d1d1;
+
+	margin-top: 2px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_Area_Gray_FF
+{
+    border: #7d7d7d 1px solid;
+
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaOver_Gray_FF
+{
+    border: #7d7d7d 1px solid;
+	background-color: #fefefe;
+
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaDown_Gray_FF
+{
+    border: #7d7d7d 1px solid;
+	background-color: #e2e2e2;
+
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+.tbTabMode_AreaUp_Gray_FF
+{
+    border: #7d7d7d 1px solid;
+	background-color: #d1d1d1;
+
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	padding-left: 5px;
+
+	cursor: default;
+	overflow: hidden;
+}
+
+.MenuWin_Gray
+{
+	width: 100%;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	border-top: 0px;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+	background-color: #F9F8F7;
+}
+.DD_Neck_Left_Gray
+{
+	height: 3px;
+	border-top: 0px;
+	border-left: #7d7d7d 1px solid;
+	border-right: 0px;
+	border-bottom: 0px;
+    background-color: #F9F8F7;
+	padding:0px;
+}
+.DD_Neck_Right_Gray
+{
+	height: 3px;
+	border-top: #7d7d7d 1px solid;
+	border-left: 0px;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: 0px;
+    background-color: #F9F8F7;
+	padding:0px;
+}
+.ContextMenuTop_Gray
+{
+	height: 3px;
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: 0px;
+    background-color: #F9F8F7;
+}
+
+.ComboBoxWin_Gray
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+    background-color: #FFFFFF;
+}
+.ComboBoxItem_Over_Gray
+{
+	border: #7d7d7d 1px solid;
+}
+.ComboBoxItem_Out_Gray
+{
+	border: #dddddd 1px solid;
+}
+
+.colorWinSelection_Gray
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+
+	border-left: #7d7d7d 1px solid;
+	border-top: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+    background-color: #F9F8F7;
+}
+.colorWin_Separator_Gray
+{
+	width: 100%;
+	height: 1px;
+    background-color: #cccccc;
+}
+
+.markWinSelection_Gray
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+
+	border: #7d7d7d 1px solid;
+    background-color: #F9F8F7;
+}
+
+.tbSizeBoxBackWin_Gray
+{
+	z-index: 10301;
+	position: absolute;
+	background-color: #ffffff;
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+}
+.tbSizeBoxStatus_Gray
+{
+	cursor: default;
+	z-index: 10301;
+	position: absolute;
+	background-color: #eeeeef;
+	border-left: #7d7d7d 1px solid;
+	border-top: #7d7d7d 1px solid;
+	border-right: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+}
+
+.tbSizeBoxCell_Gray
+{
+	width: 18px;
+	height: 18px;
+	border-right: 3px solid;
+	border-bottom: 3px solid;
+
+	border-left-color: #efefef;
+	border-bottom-color: #efefef;
+	border-top-color: #efefef;
+	border-right-color: #efefef;
+}
+.tbSizeBoxCell_Gray TD
+{
+	width: 10px;
+	height: 10px;
+	text-align: center;
+
+	border-right: #7d7d7d 1px solid;
+	border-top: #7d7d7d 1px solid;
+	border-left: #7d7d7d 1px solid;
+	border-bottom: #7d7d7d 1px solid;
+}
+
+.markCellContainer_Gray
+{
+	background-color: #cccccc;
+}
+.markCellOver_Gray
+{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+	cursor:default;
+	width: 18px;
+	height: 15px;
+	background-color: #eeeeef;
+
+	color:#000000;
+	font-family: Arial;
+	font-size:9pt;
+}
+
+.tableTempleteCellOver_Gray
+{
+	border:0px;
+	padding: 0px;
+
+	cursor:default;
+	width: 100px;
+	height: 76px;
+	background-color: #eeeeef;
+}
+.tableTempleteType_Gray
+{
+	border-color:#7d7d7d;
+
+	font-family: Arial;
+	font-size: 8pt;
+	color: #00000F;
+}
+
+.leftViewMainAreaBG_Gray
+{
+	background-color: #FBFBFA;
+}
+
+.generalBG_Gray
+{
+	background-color: #d1d1d1;
+}
+
+.codeInspectScrollbar
+{
+	scrollbar-face-color: #f5f6f6;
+	scrollbar-shadow-color: #ebebeb; 
+	scrollbar-highlight-color: #FFFFFF; 
+	scrollbar-3dlight-color: #f0f0f0; 
+	scrollbar-darkshadow-color:#e1e1e1; 
+	scrollbar-track-color: #FFFFFF;
+}
+
+.codeInspectResult_Gray
+{
+	cursor: default;
+	border-top: 1px #d1d1d1 dashed;
+	padding-left: 5px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	background-color: #fbfbfa;
+}
+
+.codeInspectResultOver_Gray
+{
+	cursor: default;
+	border-top: 1px #d1d1d1 dashed;
+	padding-left: 5px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	background-color: #fefefe;
+}
+
+.codeInspectResultSelect_Gray
+{
+	cursor: default;
+	border-top: 1px #d1d1d1 dashed;
+	padding-left: 5px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	background-color: #e2e2e2;
+}

@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=euc-kr">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma"	content="No-Cache">
+<title>이노디터(InnoDitor) 이미지 업로드 연동 설명</title>
+<style>
+BODY { FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY: 굴림; }
+TD { FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY: 굴림; }
+</style>
+
+<script language="javascript" src="./js/browser.js"></script>
+<script language="javascript">
+function fnImageSend_1()
+{
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = "http://www.innoditor.com/sample/image/sample_3.gif";// src
+	arrReturnValue[1] = "샘플";// alt
+	arrReturnValue[2] = "435";// width
+	arrReturnValue[3] = "266";// height
+	arrReturnValue[4] = "0";// border
+
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.cr)
+	{
+		// FireFox 2 / Chrome
+		opener.fnSetImageReturnValue(arrReturnValue);
+	}
+	else if(g_browserCHK.ie || g_browserCHK.wk || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		// IE 6,7,8  /  FireFox 3  / Safari 3
+		window.returnValue = arrReturnValue;
+	}
+
+	window.close();
+}
+
+function fnImageSend_2()
+{
+	var strImageHTML = "";
+	strImageHTML += "<img src='http://www.innoditor.com/sample/image/sample_3.gif' alt='샘플' width='435' height='266' border='0'>";
+
+	var arrReturnValue = new Array();
+	arrReturnValue[0] = "";// src
+	arrReturnValue[1] = "";// alt
+	arrReturnValue[2] = "";// width
+	arrReturnValue[3] = "";// height
+	arrReturnValue[4] = "";// border
+	arrReturnValue[5] = strImageHTML;// 이미지 관련 HTML 직접 설정 -> [0] ~ [4] 배열값에는 전달값 필요없음
+
+
+	if((g_browserCHK.ff && (g_browserCHK.verInfo <= 2)) || g_browserCHK.wk || g_browserCHK.op)
+	{
+		// FireFox 2 / Chrome / Safari / Opera
+		opener.fnSetImageReturnValue(arrReturnValue);
+	}
+	else if(g_browserCHK.ie || (g_browserCHK.ff && (g_browserCHK.verInfo >= 3)))
+	{
+		// IE 6,7,8  /  FireFox 3  
+		window.returnValue = arrReturnValue;
+	}
+
+	window.close();
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f7f7f7">
+
+<br>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+<tr>
+	<td align="center" width="100%">
+		고객사에서 이미지 업로드 구현할 페이지입니다.<br>
+		본 샘플은 이노디터에게 전달되어야 하는 내용만 표현하고자 단순화하여 제공한 샘플입니다.<br><br>
+
+		이노디터는 본 샘플처럼 이미지 관련 내용만 전달받으면 되기 때문에<br>
+		자체적으로 화면 페이지를 자유롭게 구성하신 후 전달값만 정확히 처리해 주시면 됩니다.<br>
+		(<span style="color:blue"><b>전달값 - 본 샘플 페이지의 소스 부분을 확인 또는 매뉴얼 참조</b></span>)
+		<br><br><br><br><br>
+
+
+
+
+		이노디터에서 제공하는 샘플을 사용하고자 하시는 경우<br>
+		innoditor > js > customize.js 에서<br><br>
+
+		<span style="color:blue">var g_strUploadImageURL = "/innoditor/pop_simple_img.html";</span><br>
+		--><br>
+		<span style="color:blue">var g_strUploadImageURL = "/innoditor/pop_upload_img.html";</span><br><br>
+		변경하신 후 매뉴얼과 샘플페이지를 참조하시어 고객사 업로드 관련 서버 모듈과 연동하셔야 합니다.<br>
+		(<span style="color:red"><b>이노디터 제공 샘플 페이지 자체가 업로드를 진행하지는 않습니다</b></span>)
+
+		<br>
+		<br>
+		<br>
+
+		<table border="0" cellpadding="0" cellspacing="0" height="120">
+		<tr>
+			<td>
+				이미지전달(기본) -> 이노디터 체험게시판 기준<br>
+				ex) 이미지 옆으로 이미지 높이만큼 멀티라인 글을 작성할 수 있습니다.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				이미지전달(확장) -> 정렬 등의 사용자 정의 추가 설정<br>
+				ex) 정렬을 설정하지 않는 경우 이미지 바로 아래 글을 작성할 수 있습니다.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				이미지전달(확장)은 pop_upload_img.html 상에 주석으로 제공되어 있으며,<br>
+				사용하시고자 하는 경우 기본설정으로 되어 있는 부분을 주석처리 하시고 확장부분을 주석해제하여<br>
+				사용하시면 됩니다.
+			</td>
+		</tr>
+		</table>
+
+		<br>
+		<br>
+
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<span style="color:red">아래의 이미지전달 기본 또는 확장을 클릭하여 확인하신 후 고객사에 적합한<br>
+				이미지 전달방식을 사용하세요</span>
+			</td>
+		</tr>
+		</table>
+
+		<br>
+
+		<table border="0" cellpadding="0" cellspacing="0" height="28">
+		<tr>
+			<td valign="bottom"><a href="javascript:fnImageSend_1();">이미지전달(기본)</a></td>
+			<td width="30"></td>
+			<td valign="bottom"><a href="javascript:fnImageSend_2();">이미지전달(확장)</a></td>
+			<td width="30"></td>
+			<td valign="bottom"><a href="javascript:window.close();">창 닫기</a></td>
+		</tr>
+		</table>
+	</td> 
+</tr>
+</table>
+
+</body> 
+</html>

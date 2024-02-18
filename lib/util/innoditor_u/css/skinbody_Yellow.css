@@ -1,0 +1,17 @@
+﻿/* Only IE Scroll, BLOCKQOUTE Style */
+
+BODY
+{
+	scrollbar-face-color: #fcf5c6;
+	scrollbar-shadow-color: #fbefa2; 
+	scrollbar-highlight-color: #FFFFFF; 
+	scrollbar-3dlight-color: #fbf4ba; 
+	scrollbar-darkshadow-color:#fbeb88; 
+	scrollbar-track-color: #FFFFFF;
+}
+
+BLOCKQUOTE
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}

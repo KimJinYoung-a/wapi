@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Flash Chart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<script language="javascript" src="FusionCharts.js"></script>
+</head>
+<body>
+<table cellpadding="5" cellspacing="0" border="1" style="font-size:8pt">
+<tr>
+	<td bgcolor="#F5F5F5" align="center">1. <b>MSBar2D</b></td>
+	<td>
+		<div id="chartdiv1" align="center"></div>
+		<script type="text/javascript">	
+			var chart = new FusionCharts("MSBar2D.swf", "chartdiv1", "320", "200", "0", "0");
+			chart.setDataURL("MSBar2D.xml");
+			chart.render("chartdiv1");
+		</script>
+	</td>
+</tr>
+<tr>
+	<td bgcolor="#F5F5F5" align="center">2. <b>MSColumn2D</b></td>
+	<td>
+		<div id="chartdiv2" align="center"></div>
+		<script type="text/javascript">	
+			var chart = new FusionCharts("MSColumn2D.swf", "chartdiv2", "320", "200", "0", "0");
+			chart.setDataURL("MSColumn2D.xml");
+			chart.render("chartdiv2");
+		</script>
+	</td>
+</tr>
+<tr>
+	<td bgcolor="#F5F5F5" align="center">3. <b>MSCombiDY2D</b></td>
+	<td>
+		<div id="chartdiv3" align="center"></div>
+		<script type="text/javascript">	
+			var chart = new FusionCharts("MSCombiDY2D.swf", "chartdiv3", "320", "200", "0", "0");
+			chart.setDataURL("MSCombiDY2D.xml");
+			chart.render("chartdiv3");
+		</script>
+	</td>
+</tr>
+<tr>
+	<td bgcolor="#F5F5F5" align="center">4. <b>Pie3D</b></td>
+	<td>
+		<div id="chartdiv4" align="center"></div>
+		<script type="text/javascript">	
+			var chart = new FusionCharts("Pie3D.swf", "chartdiv4", "320", "200", "0", "0");
+			chart.setDataURL("Pie3D.xml");
+			chart.render("chartdiv4");
+		</script>
+	</td>
+</tr>
+<tr>
+	<td bgcolor="#F5F5F5" align="center">5. <b>StackedColumn2D</b></td>
+	<td>
+		<div id="chartdiv5" align="center"></div>
+		<script type="text/javascript">	
+			var chart = new FusionCharts("StackedColumn2D.swf", "chartdiv5", "320", "200", "0", "0");
+			chart.setDataURL("StackedColumn2D.xml");
+			chart.render("chartdiv5");
+		</script>
+	</td>
+</tr>
+</table>
+</body>
+</html>
