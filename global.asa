@@ -1,0 +1,125 @@
+<!--==Visual InterDev Generated - startspan==-->
+<!--METADATA TYPE="TypeLib" NAME="Microsoft ActiveX Data Objects 2.8 Library" UUID="{00000200-0000-0010-8000-00AA006D2EA4}" VERSION="2.0"-->
+<!--==Visual InterDev Generated - endspan==-->
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+    sbSetServer ' 서버 정보
+
+    '데이터베이스 커넥션 from File
+	dim objFSO, objFile, mainConnStr, logicsConnStr, academyConnStr, alogisticsConnStr, threeplConnStr, agirlConnStr, datamartConnStr, cacheConnStr
+	dim iTmsConnStr, appNotiConnStr, appWishConnStr, AnalyzeConnStr, statisticsConnStr
+	Set objFSO  = Server.CreateObject("Scripting.FileSystemObject")
+    Dim TenCrypto
+    IF (application("Svr_Info")	= "Dev") Then
+        Set TenCrypto = Server.CreateObject("TenCrypto.ConnectionString")
+        mainConnStr     = TenCrypto.DecryptString("c:\conn\dbmain_enc.conn")
+        logicsConnStr   = TenCrypto.DecryptString("c:\conn\dblogics_enc.conn")
+        academyConnStr  = TenCrypto.DecryptString("c:\conn\dbacademy_enc.conn")
+        alogisticsConnStr   = TenCrypto.DecryptString("c:\conn\dbalogistics_enc.conn")
+        threeplConnStr  = TenCrypto.DecryptString("c:\conn\dbmain_enc.conn")
+        datamartConnStr = TenCrypto.DecryptString("c:\conn\dbDatamart_enc.conn")
+        iTmsConnStr     = TenCrypto.DecryptString("c:\conn\iTmsdb_enc.conn")
+        appNotiConnStr  = TenCrypto.DecryptString("c:\conn\dbappnoti_enc.conn")
+        appWishConnStr  = TenCrypto.DecryptString("c:\conn\dbAppWish_enc.conn")
+        AnalyzeConnStr  = TenCrypto.DecryptString("c:\conn\dbAnalyze_enc.conn")
+        cacheConnStr    = TenCrypto.DecryptString("c:\conn\dbCache_enc.conn")
+        statisticsConnStr   = TenCrypto.DecryptString("c:\conn\dbstatistics_enc.conn")
+        set TenCrypto = Nothing
+    Else
+        Set objFile = objFSO.OpenTextFile("c:\conn\dbmain.conn",1)
+        mainConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("c:\conn\dblogics.conn",1)
+        logicsConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("c:\conn\dbacademy.conn",1)
+        academyConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("c:\conn\dbalogistics.conn",1)
+        alogisticsConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("c:\conn\dbthreepl.conn",1)
+        threeplConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("C:\conn\dbDatamart.conn",1)
+        datamartConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("C:\conn\iTmsdb.conn",1)
+        iTmsConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("C:\conn\dbappnoti.conn",1)
+        appNotiConnStr = objFile.ReadLine()
+        objFile.Close
+        
+        Set objFile = objFSO.OpenTextFile("C:\conn\dbAppWish.conn",1)
+        appWishConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("C:\conn\dbAnalyze.conn",1)
+        AnalyzeConnStr = objFile.ReadLine()
+        objFile.Close
+        
+        Set objFile = objFSO.OpenTextFile("c:\conn\dbCache.conn",1)
+        cacheConnStr = objFile.ReadLine()
+        objFile.Close
+
+        Set objFile = objFSO.OpenTextFile("C:\conn\dbstatistics.conn",1)
+        statisticsConnStr = objFile.ReadLine()
+        objFile.Close
+    End IF
+
+    Set objFile = Nothing
+    Set objFSO  = Nothing
+
+    Application("db_main") 	= mainConnStr
+	Application("db_logics") = logicsConnStr
+	Application("db_academy") = academyConnStr
+
+	Application("db_alogistics") = alogisticsConnStr
+	Application("db_threepl") = threeplConnStr
+	Application("db_agirl") = agirlConnStr
+	Application("db_datamart") = datamartConnStr
+
+	Application("db_iTms") = iTmsConnStr
+	Application("db_appNoti") = appNotiConnStr
+	Application("db_appWish") = appWishConnStr
+	
+	Application("db_analyze") = AnalyzeConnStr
+	
+	Application("db_cache") = cacheConnStr
+	Application("db_statistics") = statisticsConnStr
+End Sub
+
+Sub Session_OnStart
+
+End Sub
+
+Sub Session_OnEnd
+
+End Sub
+
+'# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+'	@ 함수명 : sbSetServer
+'	@ 목   적 : 서버 정보
+'	@ 이   력 : 2006.11.15  정윤정
+
+Sub sbSetServer
+	On Error Resume Next
+	Dim objShell, buf
+	Set objShell = CreateObject("WScript.Shell")
+	buf =  objShell.RegRead("HKLM\SOFTWARE\10x10\ServerInfo")
+
+	if buf = "DevServer" Then
+		application("Svr_Info")	= "Dev"
+	END If
+	Set objShell = Nothing
+End Sub
+'# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+</SCRIPT>

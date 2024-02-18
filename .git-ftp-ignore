@@ -1,0 +1,4 @@
+# not transmitted on ftp
+# document : http://confluence.tenbyten.kr:8090/pages/viewpage.action?pageId=32312746
+.gitignore
+.git-ftp-ignore
